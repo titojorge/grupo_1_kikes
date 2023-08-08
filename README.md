@@ -13,5 +13,5 @@ Listado de 5 referencias
 INTEGRANTES 
 • Daniel Ramos. 19 años, vivo en Perico - Jujuy. Soy un Desarrollador Full Stack en proceso.
 • Leonardo Rafael Guanuco. 21 años, vivo en San Salvador de Jujuy. Soy estudiante de Programacion Web Full Stack.
-• Nicolás Vedia. 18 años, vivo en San Salvador de Jujuy. Soy un Estudiante de Programación Full Stack.
 • Jorge Zoto, 32 años, vivo en San Salvador de Jujuy, Soy estudiante de Programacion Web Full Stack 
+• Gonzalo Gomez. 22 años, vivo en San Salvador de Jujuy- Jujuy. Soy un Desarrollador Full Stack en proceso.
