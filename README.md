@@ -15,3 +15,4 @@ INTEGRANTES
 • Leonardo Rafael Guanuco. 21 años, vivo en San Salvador de Jujuy. Soy estudiante de Programacion Web Full Stack.
 • Jorge Zoto, 32 años, vivo en San Salvador de Jujuy, Soy estudiante de Programacion Web Full Stack 
 • Gonzalo Gomez. 22 años, vivo en San Salvador de Jujuy- Jujuy. Soy un Desarrollador Full Stack en proceso.
+• Sol Alancay, tengo 16 años y vivo en S.s de Jujuy, soy una de las cursantes del curso Programación Web full stack
