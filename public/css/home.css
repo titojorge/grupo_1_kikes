@@ -1,0 +1,51 @@
+html,
+body {
+  margin: 0;
+}
+*{
+  margin: 0px;
+  padding: 0px;    
+  box-sizing: border-box;
+}
+.encabezado{
+    display: inline-block;
+    background-color: khaki;
+    width: 100%;
+}
+.encabezado-2{
+    display: flex;
+    margin: 0px 10px;
+    padding: 10px 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.encabezado-3{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 15px;
+}
+.ingresa{
+    margin: 0px 10px;
+}
+.crea{
+    margin: 0px 10px;
+}
+.busqueda{
+    height: max-content;
+}
+footer{
+    width: 100%;
+    background-color: khaki;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+}
+.footer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.footer2 p, a{
+    padding:  10px 15px;
+}
