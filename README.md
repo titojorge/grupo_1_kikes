@@ -10,6 +10,9 @@ Listado de 5 referencias
 * https://www.adidas.com.ar/ <--Nuestra eleccion sobre esta referencia es por el estilo y el dinamismo que conlleva la creacion de una pagina que ofrece productos de alta calidad y un buen servicio virtual para la comunidad.
 * https://ar.puma.com/ <--Esta referencia nos lleva a la modernidad que necesitamos en nuestra pagina y la comodidad con la que se resolvio esta misma, es lo que nuestro grupo plantea como objetivo principal.
 
+ENLACE A TABLERO TRELLO
+* https://trello.com/b/XYwrDfxM/kikes-proyecto-dh
+
 INTEGRANTES 
 • Daniel Ramos. 19 años, vivo en Perico - Jujuy. Soy un Desarrollador Full Stack en proceso.
 • Leonardo Rafael Guanuco. 21 años, vivo en San Salvador de Jujuy. Soy estudiante de Programacion Web Full Stack.
