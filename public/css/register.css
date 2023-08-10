@@ -1,0 +1,104 @@
+/* styles.css */
+html, body {
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.encabezado {
+    display: inline-block;
+    background-color: khaki;
+    width: 100%;
+}
+
+.encabezado-2 {
+    display: flex;
+    margin: 0 10px;
+    padding: 10px 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.encabezado-3 {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 15px;
+}
+
+.ingresa, .crea {
+    margin: 0 10px;
+}
+
+.busqueda {
+    height: max-content;
+}
+
+.registration-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.fecha-inputs {
+    display: flex;
+    gap: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #1259c3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0022AA;
+}
+
+footer {
+    width: 100%;
+    background-color: khaki;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer2 p, .footer2 a {
+    padding: 10px 15px;
+}
