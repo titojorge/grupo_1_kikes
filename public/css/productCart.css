@@ -33,6 +33,54 @@ body {
 .busqueda{
     height: max-content;
 }
+main{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 5px;
+}
+.resumen{
+    width: 35%;
+    text-align: center;
+    margin: 10px;
+}
+.resumen h2{
+    margin-top: -5px;
+}
+.monto{
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0px;
+}
+.carrito{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 65%;
+}
+.product-carrito{
+    display: flex;
+    justify-content: space-around;
+    border: solid #000 0.5px;
+    margin: 10px;
+}
+.product-carrito div{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 5px;
+}
+.product-img{
+    width: 30%;
+}
+.description{
+    width: 30%;
+}
+.cantidad{
+    width: 20%;
+}
+.precio{
+    width: 20%;
+}
 footer{
     width: 100%;
     background-color: khaki;
