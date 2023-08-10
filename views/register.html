@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Registro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  rel="stylesheet" />
     <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <div class="encabezado">
-        <div class="encabezado-2">
-            <h1>Mi Sitio Web</h1>
-            <div class="encabezado-3">
-                <a href="#" class="ingresa">Ingresar</a>
-                <a href="#" class="crea">Crear cuenta</a>
+    <header class="encabezado">
+        <section class="encabezado-3">
+            <a class="ingresa" href="#">Ingresar</a>
+            <a class="crea" href="register.html">Crear tu cuenta</a>
+        </section>
+        <section class="encabezado-2">
+            <a href="home.html"><img src="/images/kike-logo.png" width="150px"></a>
+            <a href="#">CATEGORIA 1</a>
+            <a href="#">CATEGORIA 2</a>
+            <a href="#">CATEGORIA 3</a>
+            <a href="#">CATEGORIA 4</a>
+            <div class="input-busqueda">
+                <input class="busqueda" type="text" placeholder="Busca tu Producto">
+                <button class="busqueda"><i class="fa fa-search"></i></button>
             </div>
-        </div>
-        <div class="busqueda">
-            <!-- Coloca aquí tu barra de búsqueda si la tienes -->
-        </div>
-    </div>
+            <a href="productCart.html"><i class="fas fa-shopping-cart"></i></a>
+        </section>
+    </header>
 
     <div class="registration-form">
         <h2>REGISTRO</h2>
@@ -53,14 +61,32 @@
 
     <footer>
         <div class="footer">
-            <div class="footer2">
-                <p>Términos y condiciones</p>
-                <p>Política de privacidad</p>
-            </div>
-            <div class="footer2">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-            </div>
+            <section class="footer2">
+                <p>Informacion General</p>
+                <a href="#">Envio y entregas</a>
+                <a href="#">Cambios</a>
+                <a href="#">Devoluciones</a>
+                <a href="#">Opciones de Pago</a>
+            </section>
+            <section class="footer2">
+                <p>Otras Tiendas</p>
+                <a href="#">Sucursal 1</a>
+                <a href="#">Sucursal 2</a>
+                <a href="#">Sucursal 3</a>
+            </section>
+            <section class="footer2">
+                <p>Acerca de Nosotros</p>
+                <a href="#">Quienes somos</a>
+                <a href="#">Sugerencias y Reclamos</a>
+                <a href="#">Contacto</a>
+            </section>
+            <section class="footer2">
+                <p>Redes Sociales</p>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-tiktok"></i> Tik-Tok</a>
+            </section>
         </div>
     </footer>
 </body>
