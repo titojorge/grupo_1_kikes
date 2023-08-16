@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>INICIO DE SESION</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  rel="stylesheet" />
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <header class="encabezado">
+        <section class="encabezado-3">
+            <a class="ingresa" href="#">Ingresar</a>
+            <a class="crea" href="register.html">Crear tu cuenta</a>
+        </section>
+        <section class="encabezado-2">
+            <a href="home.html"><img src="/images/kike-logo.png" width="150px"></a>
+            <a href="#">CATEGORIA 1</a>
+            <a href="#">CATEGORIA 2</a>
+            <a href="#">CATEGORIA 3</a>
+            <a href="#">CATEGORIA 4</a>
+            <div class="input-busqueda">
+                <input class="busqueda" type="text" placeholder="Busca tu Producto">
+                <button class="busqueda"><i class="fa fa-search"></i></button>
+            </div>
+            <a href="productCart.html"><i class="fas fa-shopping-cart"></i></a>
+        </section>
+    </header>
+
+    <section class="login-form">
+        <h3>INICIO DE SESION</h3>
+        <form action="procesar_INICIO.php" method="post">
+
+            <div class="input-form">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-form">
+                <label for="contrasenia">Contraseña:</label>
+                <input type="password" id="contrasenia" name="contrasenia" required>
+            </div>
+            
+            <div class="input-form">
+                <input type="submit" value="Entrar">
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <section class="footer2">
+                <p>Informacion General</p>
+                <a href="#">Envio y entregas</a>
+                <a href="#">Cambios</a>
+                <a href="#">Devoluciones</a>
+                <a href="#">Opciones de Pago</a>
+            </section>
+            <section class="footer2">
+                <p>Otras Tiendas</p>
+                <a href="#">Sucursal 1</a>
+                <a href="#">Sucursal 2</a>
+                <a href="#">Sucursal 3</a>
+            </section>
+            <section class="footer2">
+                <p>Acerca de Nosotros</p>
+                <a href="#">Quienes somos</a>
+                <a href="#">Sugerencias y Reclamos</a>
+                <a href="#">Contacto</a>
+            </section>
+            <section class="footer2">
+                <p>Redes Sociales</p>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-tiktok"></i> Tik-Tok</a>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>
