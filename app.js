@@ -3,7 +3,13 @@ const path = require("path");
 
 const app = express();
 
+//config
+
 app.use(express.static(path.join(__dirname, "public")));
+
+//config ejs
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
 
 //rutas
 
