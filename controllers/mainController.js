@@ -16,6 +16,10 @@ const mainController = {
     register: (req, res) => {
         return res.render('register');
         //res.sendFile(path.resolve(__dirname, '../views/register.html'));
+    },
+    new: (req, res) => {
+        return res.render('new');
+        //res.sendFile(path.join(__dirname, '../views/home.html'));
     }
 }
 
