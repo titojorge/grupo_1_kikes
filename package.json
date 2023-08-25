@@ -4,11 +4,18 @@
   "description": "Tienda de ropa y accesorios deportivos",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "nodemon app.js"
+=======
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> d379fe6ddfea2bd0803e6d5d174ae7b951e5611b
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "nodemon": "^3.0.1"
   }
