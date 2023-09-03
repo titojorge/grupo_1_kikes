@@ -1,0 +1,137 @@
+[
+    {
+        "Identificador": 1,
+        "Nombre": "Odell",
+        "Apellido": "Patterfield",
+        "Email": "opatterfield0@scientificamerican.com",
+        "Contrasenia": "wS4}PZQ'Mh.LF",
+        "Categoria": "Admin",
+        "Imagen": "/images/avatars/jala.jpg"
+    },
+    {
+        "Identificador": 2,
+        "Nombre": "Skelly",
+        "Apellido": "Dawley",
+        "Email": "sdawley1@nymag.com",
+        "Contrasenia": "aT5,JIu\\<{",
+        "Categoria": "Admin",
+        "Imagen": "/images/avatars/kipa.jpg"
+    },
+    {
+        "Identificador": 3,
+        "Nombre": "Corette",
+        "Apellido": "Cobbold",
+        "Email": "ccobbold2@i2i.jp",
+        "Contrasenia": "wS6\\=%8S",
+        "Categoria": "Customer",
+        "Imagen": ""
+    },
+    {
+        "Identificador": 4,
+        "Nombre": "Fanya",
+        "Apellido": "Rielly",
+        "Email": "frielly3@nifty.com",
+        "Contrasenia": "aJ1~RpO7jHtXQP",
+        "Categoria": "Customer",
+        "Imagen": "/images/avatars/jala.jpg"
+    },
+    {
+        "Identificador": 5,
+        "Nombre": "Ambros",
+        "Apellido": "McCrann",
+        "Email": "amccrann4@cisco.com",
+        "Contrasenia": "pO6$}?cMN",
+        "Categoria": "Customer",
+        "Imagen": "/images/avatars/kipa.jpg"
+    },
+    {
+        "Identificador": 6,
+        "Nombre": "Martynne",
+        "Apellido": "Lorentz",
+        "Email": "mlorentz5@netvibes.com",
+        "Contrasenia": "xB0!b7)t=.+",
+        "Categoria": "Admin",
+        "Imagen": ""
+    },
+    {
+        "Identificador": 7,
+        "Nombre": "Sidnee",
+        "Apellido": "Connor",
+        "Email": "sconnor6@mashable.com",
+        "Contrasenia": "lO0(.,G_",
+        "Categoria": "Customer",
+        "Imagen": "/images/avatars/polloCorazon.jpg"
+    },
+    {
+        "Identificador": 8,
+        "Nombre": "Lavena",
+        "Apellido": "Benedikt",
+        "Email": "lbenedikt7@comcast.net",
+        "Contrasenia": "yY0@G53a6~\\",
+        "Categoria": "Admin",
+        "Imagen": "/images/avatars/tostada.jpg"
+    },
+    {
+        "Identificador": 9,
+        "Nombre": "Harrie",
+        "Apellido": "Hiddsley",
+        "Email": "hhiddsley8@ameblo.jp",
+        "Contrasenia": "fI6}+pZ*a1",
+        "Categoria": "Admin",
+        "Imagen": "/images/avatars/pletzale.jpg"
+    },
+    {
+        "Identificador": 10,
+        "Nombre": "Pincus",
+        "Apellido": "Neiland",
+        "Email": "pneiland9@go.com",
+        "Contrasenia": "iF1\"iXWyur<b",
+        "Categoria": "Admin",
+        "Imagen": "/images/avatars/jala.jpg"
+    },
+    {
+        "Identificador": 11,
+        "Nombre": "Brana",
+        "Apellido": "Helstrip",
+        "Email": "bhelstripa@free.fr",
+        "Contrasenia": "oK0%RN@NI&\\{d5=",
+        "Categoria": "Admin",
+        "Imagen": "/images/avatars/jala.jpg"
+    },
+    {
+        "Identificador": 12,
+        "Nombre": "Donnajean",
+        "Apellido": "Pavlovsky",
+        "Email": "dpavlovskyb@barnesandnoble.com",
+        "Contrasenia": "yO2`B\"g!{(o@WYW",
+        "Categoria": "Customer",
+        "Imagen": "/images/avatars/pletzale.jpg"
+    },
+    {
+        "Identificador": 13,
+        "Nombre": "Samson",
+        "Apellido": "Iacavone",
+        "Email": "siacavonec@histats.com",
+        "Contrasenia": "fO9\"Y/&7{0n*mPm",
+        "Categoria": "Admin",
+        "Imagen": "/images/avatars/kipa.jpg"
+    },
+    {
+        "Identificador": 14,
+        "Nombre": "Dalli",
+        "Apellido": "Melson",
+        "Email": "dmelsond@51.la",
+        "Contrasenia": "dU1<\"i+}h",
+        "Categoria": "Customer",
+        "Imagen": ""
+    },
+    {
+        "Identificador": 15,
+        "Nombre": "Madlen",
+        "Apellido": "Grumell",
+        "Email": "mgrumelle@livejournal.com",
+        "Contrasenia": "mF8.,,QL(zeoAG",
+        "Categoria": "Customer",
+        "Imagen": "/images/avatars/polloCorazon.jpg"
+    }
+]
