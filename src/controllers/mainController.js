@@ -6,7 +6,7 @@ const mainController = {
         //res.sendFile(path.join(__dirname, '../views/home.html'));
     },
     login: (req, res) => {
-        return res.render('login');
+        return res.render('./users/login');
         //res.sendFile(path.resolve(__dirname, '../views/login.html'));
     },
     productCart: (req, res) => {
@@ -14,7 +14,7 @@ const mainController = {
         //res.sendFile(path.resolve(__dirname, '../views/productCart.html'));
     },
     register: (req, res) => {
-        return res.render('register');
+        return res.render('./users/register');
         //res.sendFile(path.resolve(__dirname, '../views/register.html'));
     },
     new: (req, res) => {
