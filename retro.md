@@ -1,3 +1,26 @@
+RETROSPECTIVA SPRINT 3:
+
+- Comenzar a hacer:
+* Más trabajo en equipo. Incentivar más a la participacion verbal y no solo mensajes.
+* Consultar más en el grupo si existen dudas en el codigo.
+* Utilizar con mayor frecuencia el trello.
+
+- Hacer más:
+* Trabajar más con GIT.
+* Mejoras en el estilo CSS del sitio para una mejor experiencia de usuario.
+
+- Continuar haciendo:
+* Notificar novedades, comprometerse con el equipo
+* Reuniones de organización para los sprints
+
+- Hacer menos:
+* Comprometerse en algo que no se puede cumplir
+* Dejar de practicar html y más css
+
+- Dejar de hacer:
+* Tratar de no hacer todo en los últimos días del plazo.
+
+
 RETROSPECTIVA SPRINT 2:
 
 - Comenzar a hacer:
