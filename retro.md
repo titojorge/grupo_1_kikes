@@ -10,12 +10,14 @@ RETROSPECTIVA SPRINT 3:
 * Mejoras en el estilo CSS del sitio para una mejor experiencia de usuario.
 
 - Continuar haciendo:
-* Notificar novedades, comprometerse con el equipo
-* Reuniones de organización para los sprints
+* Notificar novedades, comprometerse con el equipo.
+* Reuniones de organización para los sprints.
+* Cumplir con los vencimientos de los sprints.
 
 - Hacer menos:
-* Comprometerse en algo que no se puede cumplir
-* Dejar de practicar html y más css
+* Comprometerse en algo que no se puede cumplir.
+* No comunicar dificultades o impedimientos que surgan.
+* Evitar retrasar el avance del proyecto. 
 
 - Dejar de hacer:
 * Tratar de no hacer todo en los últimos días del plazo.
