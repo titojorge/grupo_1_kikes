@@ -19,3 +19,4 @@ INTEGRANTES
 • Jorge Zoto, 32 años, vivo en San Salvador de Jujuy, Soy estudiante de Programacion Web Full Stack 
 • Gonzalo Gomez. 22 años, vivo en San Salvador de Jujuy- Jujuy. Soy un Desarrollador Full Stack en proceso.
 • Sol Alancay, tengo 16 años y vivo en S.s de Jujuy, soy una de las cursantes del curso Programación Web full stack
+• Nicolás Vedia, tengo 18 años y vivo en Jujuy, soy un alumno del curso Programación Web full stack
