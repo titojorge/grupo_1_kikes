@@ -7,9 +7,14 @@ body {
     padding: 0px;    
     box-sizing: border-box;
 }
+/* colores de letras fuente */
+p, a{
+    color:  rgba(255, 255, 255, 0.899);
+}
+
 .encabezado{
     display: inline-block;
-    background-color: khaki;
+    background-color: rgba(25, 10, 110, 0.899);
     width: 100%;
 }
 .encabezado-2{
@@ -26,16 +31,19 @@ body {
 }
 .ingresa{
     margin: 0px 10px;
+    background-color: rgba(0, 0, 0, 0.899);
+
 }
 .crea{
     margin: 0px 10px;
+    background-color: rgba(0, 0, 0, 0.899);
 }
 .busqueda{
     height: max-content;
 }
 footer{
     width: 100%;
-    background-color: khaki;
+    background-color: rgba(25, 10, 110, 0.899);
 }
 .footer{
     display: flex;
@@ -131,18 +139,19 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: nowrap;
-    box-shadow: 5px 5px 10px rgb(100, 100, 100);
+    box-shadow: 5px 5px 10px rgb(78, 78, 78);
 }
 .articulo_oferta p{
     text-align: justify;
-    padding:5px 15px
+    padding:5px 15px;
+    color: rgb(0, 0, 0);
 }
 .imagen_oferta{
     width: 100px;
     margin:auto;
 }
 .suscripcion{
-    background-color: orange;
+    background-color: rgb(30, 0, 255);
     width: 60%;
     margin: 25px auto;
     padding: 20px 30px;
