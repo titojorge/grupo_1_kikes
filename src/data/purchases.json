@@ -1,0 +1,130 @@
+[
+    {
+      "purchase_id": 1,
+      "user_id": 3,
+      "date": "2023-09-06",
+      "items": [
+        {
+          "product_id": 1,
+          "quantity": 2,
+          "subtotal": 200
+        },
+        {
+          "product_id": 3,
+          "quantity": 1,
+          "subtotal": 72999
+        }
+      ],
+      "total": 73229.99,
+      "status": "Completada"
+    },
+    {
+      "purchase_id": 2,
+      "user_id": 4,
+      "date": "2023-09-05",
+      "items": [
+        {
+          "product_id": 2,
+          "quantity": 1,
+          "subtotal": 500
+        }
+      ],
+      "total": 500,
+      "status": "En Proceso"
+    },
+    {
+      "purchase_id": 3,
+      "user_id": 5,
+      "date": "2023-09-04",
+      "items": [
+        {
+          "product_id": 4,
+          "quantity": 1,
+          "subtotal": 43110
+        },
+        {
+          "product_id": 7,
+          "quantity": 2,
+          "subtotal": 73400
+        }
+      ],
+      "total": 116510,
+      "status": "Completada"
+    },
+    {
+      "purchase_id": 4,
+      "user_id": 6,
+      "date": "2023-09-03",
+      "items": [
+        {
+          "product_id": 5,
+          "quantity": 3,
+          "subtotal": 127800
+        }
+      ],
+      "total": 127800,
+      "status": "En Proceso"
+    },
+    {
+      "purchase_id": 5,
+      "user_id": 1,
+      "date": "2023-09-02",
+      "items": [
+        {
+          "product_id": 8,
+          "quantity": 1,
+          "subtotal": 148000
+        }
+      ],
+      "total": 148000,
+      "status": "Completada"
+    },
+    {
+      "purchase_id": 6,
+      "user_id": 2,
+      "date": "2023-09-01",
+      "items": [
+        {
+          "product_id": 10,
+          "quantity": 2,
+          "subtotal": 2400
+        }
+      ],
+      "total": 2400,
+      "status": "Completada"
+    },
+    {
+      "purchase_id": 7,
+      "user_id": 7,
+      "date": "2023-08-31",
+      "items": [
+        {
+          "product_id": 6,
+          "quantity": 1,
+          "subtotal": 36700
+        },
+        {
+          "product_id": 9,
+          "quantity": 1,
+          "subtotal": 11399
+        }
+      ],
+      "total": 48099,
+      "status": "Completada"
+    },
+    {
+      "purchase_id": 8,
+      "user_id": 8,
+      "date": "2023-08-30",
+      "items": [
+        {
+          "product_id": 3,
+          "quantity": 2,
+          "subtotal": 145998
+        }
+      ],
+      "total": 145998,
+      "status": "Completada"
+    }
+  ]
+  
