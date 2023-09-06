@@ -10,6 +10,7 @@ body {
 /* colores de letras fuente */
 p, a{
     color:  rgba(255, 255, 255, 0.899);
+    text-decoration: none;
 }
 
 .encabezado{
@@ -18,6 +19,7 @@ p, a{
     width: 100%;
 }
 .encabezado-2{
+    font-family: 'Hind Siliguri', sans-serif;
     display: flex;
     margin: 0px 10px;
     padding: 10px 20px;
@@ -25,7 +27,11 @@ p, a{
     align-items: center;
 }
 .encabezado-3{
+    font-size: 13px;
     display: flex;
+    position: relative;
+    top: 15px;
+    right: 15px;
     justify-content: flex-end;
     margin: 10px 15px;
 }
@@ -39,7 +45,39 @@ p, a{
     background-color: rgba(0, 0, 0, 0.899);
 }
 .busqueda{
-    height: max-content;
+    transition: border ease 1s;
+    border: solid thin var(--gl-color-grey-100);
+    padding: 0 35px 0 10px;
+    background-color: var(--gl-color-grey-100);
+    height: 32px;
+    max-width: 230px;
+    color: var(--gl-color-black);
+    font-family: var(--gl-body-font-set-family-functional-5),var(--gl-font-family-fallback);
+    font-size: var(--gl-body-font-set-size-functional-5);
+    font-style: var(--gl-body-font-set-style-functional-5);
+    font-weight: var(--gl-body-font-set-weight-functional-5);
+    letter-spacing: var(--gl-body-font-set-letterspacing-functional-5);
+    line-height: var(--gl-body-font-set-lineheight-functional-5);
+    text-decoration: var(--gl-body-font-set-decoration-functional-5);
+    text-transform: var(--gl-body-font-set-case-functional-5);
+    z-index: 1;
+    flex: 1
+}
+.busqueda:hover{
+    border-color: var(--gl-color-grey-700);
+    color: var(--gl-color-black)
+}
+.fa-search{
+    position: relative;
+    right: 25px;
+}
+.comment-fixed{
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+}
+.fa-comments{
+    font-size: 70px;
 }
 footer{
     width: 100%;
