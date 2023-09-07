@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kike</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  rel="stylesheet" />
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+<%- include('../partials/header')%>
+<h1>Detalle del Producto</h1>
+<div class="container-title">Pelota Adidas</div>
+<article class="articulo_detalle">
+    <main>
+        <div class="container-img">
+            <img class="imagen_detalle" src="/images/pelota_adidas.jpg" alt="">
+        </div>
+        <div class="container-info-product">
+            <div class="container-price">
+                <span>$ XXXX , XX</span>
+            </div>
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Odit voluptate quam vero quibusdam dicta maiores,</p>
+                <p>neque officiis laborum recusandae qui, soluta minima molestiae quo,</p>
+                <p>cum molestias magni incidunt perferendis dignissimos.</p>
+            </div>
+            <button id="buy-button">Comprar</button>
+        <script>
+            document.getElementById("buy-button").addEventListener("click", function() {
+            // Aquí puedes agregar el código para manejar la acción de compra
+            alert("Producto comprado!");
+            });
+        </script>
+    </main>
+</article>
+
+<div style="clear: both;"></div>
+
+<%- include('../partials/footer')%>
