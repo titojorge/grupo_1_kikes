@@ -1,15 +1,9 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>INICIO DE SESION</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  rel="stylesheet" />
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/home.css">
-</head>
+<html lang="en">
+    <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header')%>
-
+    
     <section class="login-form">
         <h3>INICIO DE SESION</h3>
         <form action="procesar_INICIO.php" method="post">
@@ -29,7 +23,6 @@
             </div>
         </form>
     </section>
-
     <%- include('../partials/footer')%>
 </body>
 </html>
