@@ -7,8 +7,6 @@ router.get('/', mainController.home)
 router.get('/home', mainController.home)
 
 router.get('/login', mainController.login)
-router.get('/productCart', mainController.productCart)
 router.get('/register', mainController.register)
-router.get('/new', mainController.new)
 
 module.exports = router;

@@ -99,3 +99,6 @@ footer{
 .container-img, .container-info-product {
 	margin :0px; 
 }
+.container-info-product p{
+    color:rgba(0, 0, 0, 0.899)
+}

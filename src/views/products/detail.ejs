@@ -9,23 +9,29 @@
 </head>
 <%- include('../partials/header')%>
 <h1>Detalle del Producto</h1>
-<div class="container-title">Pelota Adidas</div>
+<div class="container-title"><%= productFound.name %></div>
 <article class="articulo_detalle">
     <main>
         <div class="container-img">
-            <img class="imagen_detalle" src="/images/pelota_adidas.jpg" alt="">
+            <img class="imagen_detalle" src="/images/productsImg/<%= productFound.image %>" alt="">
         </div>
         <div class="container-info-product">
             <div class="container-price">
-                <span>$ XXXX , XX</span>
+                <span>$ <%= productFound.price %></span>
             </div>
             <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Odit voluptate quam vero quibusdam dicta maiores,</p>
-                <p>neque officiis laborum recusandae qui, soluta minima molestiae quo,</p>
-                <p>cum molestias magni incidunt perferendis dignissimos.</p>
+                <p><%= productFound.description %></p>
+            </div>
+            <div class="discount">
+                <p><%= productFound.discount %> %</p>
             </div>
             <button id="buy-button">Comprar</button>
+            <a href="/products/edit/<%= productFound.id %>" class="action-button edit">
+                <button>EDITAR PRODUCTO</button>
+            </a>
+			<form action="/products/delete/<%= productFound.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+				<button type="submit" class="action-button delete">ELIMINAR</button>
+			</form>
         <script>
             document.getElementById("buy-button").addEventListener("click", function() {
             // Aquí puedes agregar el código para manejar la acción de compra

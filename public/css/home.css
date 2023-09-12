@@ -38,7 +38,6 @@ p, a{
 .ingresa{
     margin: 0px 10px;
     background-color: rgba(0, 0, 0, 0.899);
-
 }
 .crea{
     margin: 0px 10px;
@@ -52,7 +51,6 @@ p, a{
     height: 32px;
     max-width: 230px;
 }
-
 .fa-search{
     position: relative;
     top: 2px;
@@ -158,12 +156,14 @@ footer{
 .articulos_oferta{
     display: flex;
     justify-content: space-around;
+    margin: 0px 15px;
+    flex-wrap: wrap;
 }
 .articulo_oferta{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     box-shadow: 5px 5px 10px rgb(78, 78, 78);
 }
 .articulo_oferta p{
@@ -172,8 +172,11 @@ footer{
     color: rgb(0, 0, 0);
 }
 .imagen_oferta{
-    width: 100px;
+    width: 100%;
     margin:auto;
+}
+.articulo_oferta a img{
+    text-align: center;
 }
 .suscripcion{
     background-color: rgb(30, 0, 255);
