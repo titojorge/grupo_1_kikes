@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
     <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    </head>
 <body>
     <%- include('./partials/header')%>
     
@@ -39,33 +44,20 @@
         <section class="productos_oferta">
             <h2>Productos en Oferta</h2>
             <article class="articulos_oferta">
-                <div class="articulo_oferta">
-                    <img class="imagen_oferta" src="/images/pelota_adidas.jpg" alt="">
-                    <p>Descripcion</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptate quam vero quibusdam dicta maiores,
-                         neque officiis laborum recusandae qui, soluta minima molestiae quo, cum molestias magni incidunt perferendis
-                          dignissimos.</p>
-                    <p>Precio: $ XXXX , XX</p>
-                    <p class="product">Pelota Adidas</p>
-                </div>
-                <div class="articulo_oferta">
-                    <img class="imagen_oferta" src="/images/botin_futbol.jpg" alt="">
-                    <p>Descripcion</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptate quam vero quibusdam dicta maiores,
-                         neque officiis laborum recusandae qui, soluta minima molestiae quo, cum molestias magni incidunt perferendis
-                          dignissimos.</p>
-                    <p>Precio: $ XXXX , XX</p>
-                    <p class="product">Botines de Futbol</p>
-                </div>
-                <div class="articulo_oferta">
-                    <img class="imagen_oferta" src="/images/conjunto_deportivo.jpg" alt="">
-                    <p>Descripcion</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptate quam vero quibusdam dicta maiores,
-                         neque officiis laborum recusandae qui, soluta minima molestiae quo, cum molestias magni incidunt perferendis
-                          dignissimos.</p>
-                    <p>Precio: $ XXXX , XX</p>
-                    <p class="product">Conjunto deportivo hombre</p>
-                </div>
+                <% products.forEach(function(elem) { %>
+                    <% if (elem.type_category == 'in-sale') { %>
+                    <div class="articulo_oferta">
+                        <a href="products/detail/<%= elem.id %>">
+                            <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
+                            <p><b>Descripcion</b></p>
+                            <p><%= elem.description %></p>
+                            <p><b>Precio:</b> $ <%= elem.price %></p>
+                            <p><b>Descuento:</b> $ <%= elem.discount %></p>
+                            <p class="product"><b><%= elem.name %></b></p>
+                        </a>
+                    </div>
+                    <% } %>
+                <% }) %>
             </article>
         </section>
         <section class="suscripcion">

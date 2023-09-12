@@ -12,14 +12,12 @@
     margin-bottom: 20px;
 }
 
-label, input {
-    display: block;
-    margin-bottom: 15px;
-}
-
 .input-form{
+    display: block;
     margin: auto;
+    margin-bottom: 15px;
     width: 40%;
+
 }
 
 input[type="email"],

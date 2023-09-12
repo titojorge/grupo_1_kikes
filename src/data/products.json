@@ -1,92 +1,112 @@
 [
     {
-     "id": 1,
-     "name": "CAMISETA DE RIVER ADIDAS OFICIAL",
-     "price": 100,
-     "discount": 50,
-     "category": "FUTBOL",
-     "description": "Esta nueva camiseta oficial de River Plate ADIDAS muestra elegancia en su diseño con una banda roja que le cruza simulando aquellos uniformes de los inicios del Siglo XX. Un diseño sobrio para un equipo que se supera cada día.",
-     "image": "camiseta-de-river-adidas-oficial-blanca.jpg"
+        "id": 1,
+        "name": "CAMISETA DE RIVER ADIDAS 2023 OFICIAL",
+        "price": "25000",
+        "discount": "15",
+        "category": "FUTBOL",
+        "description": "Esta nueva camiseta oficial de River Plate ADIDAS muestra elegancia en su diseño con una banda roja que le cruza simulando aquellos uniformes de los inicios del Siglo XX. Un diseño sobrio para un equipo que se supera cada día.",
+        "image": "camiseta-de-river-adidas-oficial-blanca.jpg",
+        "type_category": "in-sale"
     },
     {
-     "id": 2,
-     "name": "CAMISETA DE BOCA ADIDAS OFICIAL",
-     "price": 500,
-     "discount": 3,
-     "category": "FUTBOL",
-     "description": "Esta nueva camiseta titular de Boca Juniors ADIDAS une la pasión y el barrio con diferentes tonos que logran un efecto visual y una prominente franja central que resaltan sus colores, el azul y oro.",
-     "image": "camiseta-de-boca-adidas-oficial-azul.jpg"
+        "id": 2,
+        "name": "CAMISETA DE BOCA ADIDAS OFICIAL",
+        "price": 500,
+        "discount": 3,
+        "category": "FUTBOL",
+        "description": "Esta nueva camiseta titular de Boca Juniors ADIDAS une la pasión y el barrio con diferentes tonos que logran un efecto visual y una prominente franja central que resaltan sus colores, el azul y oro.",
+        "image": "camiseta-de-boca-adidas-oficial-azul.jpg",
+        "type_category": "in-sale"
     },
     {
-     "id": 3,
-     "name": "SHORT DE RIVER ADIDAS OFICIAL",
-     "price": 72999,
-     "discount": 25,
-     "category": "FUTBOL",
-     "description": "Alentá a River Plate desde la tribuna o desde donde sea con este short de fútbol que complementa el conjunto titular. Posee cortes laterales en el dobladillo que te permiten correr y cambiar de dirección sin restricciones.",
-     "image": "short-de-river-adidas-oficial-negro.jpg"
+        "id": 3,
+        "name": "SHORT DE RIVER ADIDAS OFICIAL",
+        "price": 72999,
+        "discount": 25,
+        "category": "FUTBOL",
+        "description": "Alentá a River Plate desde la tribuna o desde donde sea con este short de fútbol que complementa el conjunto titular. Posee cortes laterales en el dobladillo que te permiten correr y cambiar de dirección sin restricciones.",
+        "image": "short-de-river-adidas-oficial-negro.jpg",
+        "type_category": "visited"
     },
     {
-     "id": 4,
-     "name": "CAMISETA DE ARGENTINA ADIDAS ALTERNATIVA AUTHENTIC VIOLETA",
-     "description": "La camiseta alternativa de Argentina representa la igualdad de género. Esta versión, luce tonos morados vibrantes y estampados llamativos inspirados en el Sol de Mayo de la bandera nacional.",
-     "price": 47900,
-     "discount": 10,
-     "image": "camiseta-de-argentina-adidas-alternativa-authentic-violeta.jpg",
-     "category": "FUTBOL"
+        "id": 4,
+        "name": "CAMISETA DE ARGENTINA ADIDAS ALTERNATIVA AUTHENTIC VIOLETA",
+        "description": "La camiseta alternativa de Argentina representa la igualdad de género. Esta versión, luce tonos morados vibrantes y estampados llamativos inspirados en el Sol de Mayo de la bandera nacional.",
+        "price": 47900,
+        "category": "FUTBOL",
+        "discount": 10,
+        "image": "camiseta-de-argentina-adidas-alternativa-authentic-violeta.jpg",
+        "type_category": "visited"
     },
     {
-     "id": 5,
-     "name": "CAMISETA DE ARGENTINA ADIDAS ALTERNATIVA NEGRA",
-     "description": "Desde su soleado norte hasta su helado sur, Argentina tiene belleza natural en abundancia. Reflejando los variados paisajes y vistas majestuosas del país, los colores en esta camiseta alternativa ADIDAS se encargan de que siempre te destaqués al momento de apoyar a tu selección.",
-     "price": 53000,
-     "discount": 20,
-     "image": "camiseta-de-argentina-adidas-negra.jpg",
-     "category": "FUTBOL"
+        "id": 5,
+        "name": "CAMISETA DE ARGENTINA ADIDAS ALTERNATIVA NEGRA",
+        "price": 53000,
+        "discount": 20,
+        "category": "FUTBOL",
+        "description": "Desde su soleado norte hasta su helado sur, Argentina tiene belleza natural en abundancia. Reflejando los variados paisajes y vistas majestuosas del país, los colores en esta camiseta alternativa ADIDAS se encargan de que siempre te destaqués al momento de apoyar a tu selección.",
+        "image": "camiseta-de-argentina-adidas-negra.jpg",
+        "type_category": "in-sale"
     },
     {
-     "id": 6,
-     "name": "CAMISETA DE ARGENTINA ADIDAS FAN CAMPEONES BLANCA",
-     "description": "¡UNA CAMISETA CON LOS COLORES DE LA SELECCIÓN PARA QUE LOS HINCHAS FESTEJEN LA TERCERA ESTRELLA! Camiseta de fútbol de la Selección Argentina hecha para los fanáticos que quieren celebrar la tercera estrella conquistada en la última Copa del Mundo.",
-     "price": 20999,
-     "discount": 12,
-     "image": "camiseta-de-argentina-adidas-campeones-fan-blanca.jpg",
-     "category": "FUTBOL"
+        "id": 6,
+        "name": "CAMISETA DE ARGENTINA ADIDAS FAN CAMPEONES BLANCA",
+        "price": 20999,
+        "discount": 12,
+        "category": "FUTBOL",
+        "description": "¡UNA CAMISETA CON LOS COLORES DE LA SELECCIÓN PARA QUE LOS HINCHAS FESTEJEN LA TERCERA ESTRELLA! Camiseta de fútbol de la Selección Argentina hecha para los fanáticos que quieren celebrar la tercera estrella conquistada en la última Copa del Mundo.",
+        "image": "camiseta-de-argentina-adidas-campeones-fan-blanca.jpg",
+        "type_category": "visited"
     },
     {
-     "id": 7,
-     "name": "SHORT DE FUTBOL ADIDAS BOCA JUNIORS DOWNTIME AZUL",
-     "description": "La temporada de fútbol es despiadada desde el primer silbatazo. Por eso, adidas creó estos cómodos shorts para que el equipo de Boca Juniors disfrutara de esos pequeños momentos de relajación.",
-     "price": 36700,
-     "discount": 5,
-     "image": "short-de-futbol-adidas-boca-juniors-downtime-azul.jpg",
-     "category": "FUTBOL"
+        "id": 7,
+        "name": "SHORT DE FUTBOL ADIDAS BOCA JUNIORS DOWNTIME AZUL",
+        "price": 36700,
+        "discount": 5,
+        "category": "FUTBOL",
+        "description": "La temporada de fútbol es despiadada desde el primer silbatazo. Por eso, adidas creó estos cómodos shorts para que el equipo de Boca Juniors disfrutara de esos pequeños momentos de relajación.",
+        "image": "short-de-futbol-adidas-boca-juniors-downtime-azul.jpg",
+        "type_category": "visited"
     },
     {
-     "id": 8,
-     "name": "BOTINES DE FUTSAL ADIDAS PREDATOR ACCURACY. 3 NARANJA",
-     "description": "Control + precisión = confianza. Cuando el arco está en tus ojos, apuntá a la perfección con ADIDAS Predator Accuracy.",
-     "price": 148000,
-     "discount": 2,
-     "image": "botines-de-futsal-adidas-predator-accuracy-3-naranja.jpg",
-     "category": "FUTBOL"
+        "id": 8,
+        "name": "BOTINES DE FUTSAL ADIDAS PREDATOR ACCURACY. 3 NARANJA",
+        "price": 148000,
+        "discount": 2,
+        "category": "FUTBOL",
+        "description": "Control + precisión = confianza. Cuando el arco está en tus ojos, apuntá a la perfección con ADIDAS Predator Accuracy.",
+        "image": "botines-de-futsal-adidas-predator-accuracy-3-naranja.jpg",
+        "type_category": "visited"
     },
     {
-     "id": 9,
-     "name": "PELOTA DE FUTBOL NASSAU POKER NUMERO 5 BLANCA",
-     "description": "Demostrá tus habilidades acompañado de la calidad de la pelota NASSAU Poker.",
-     "price": 11399,
-     "discount": 0,
-     "image": "pelota-de-futbol-nassau-poker-numero-5-blanca.jpg",
-     "category": "FUTBOL"
+        "id": 9,
+        "name": "PELOTA DE FUTBOL NASSAU POKER NUMERO 5 BLANCA",
+        "price": 11399,
+        "discount": 0,
+        "category": "FUTBOL",
+        "description": "Demostrá tus habilidades acompañado de la calidad de la pelota NASSAU Poker.",
+        "image": "pelota-de-futbol-nassau-poker-numero-5-blanca.jpg",
+        "type_category": "in-sale"
     },
     {
-     "id": 10,
-     "name": "PELOTA DE FUTBOL NASSAU SUPREME NUMERO 5 BLANCA",
-     "description": "Ideal para tus momentos de recreación con amigos. El balón cuenta con las medidas y pesos reglamentarios.",
-     "price": 1200,
-     "discount": 10,
-     "image": "pelota-de-futbol-nassau-supreme-numero-5-blanca.jpg",
-     "category": "FUTBOL"
+        "id": 10,
+        "name": "PELOTA DE FUTBOL NASSAU SUPREME NUMERO 5 BLANCA",
+        "price": 1200,
+        "discount": 10,
+        "category": "FUTBOL",
+        "description": "Ideal para tus momentos de recreación con amigos. El balón cuenta con las medidas y pesos reglamentarios.",
+        "image": "pelota-de-futbol-nassau-supreme-numero-5-blanca.jpg",
+        "type_category": "in-sale"
+    },
+    {
+        "id": 12,
+        "name": "CAMISETA RIVER ALTERNATIVA 2023",
+        "discount": "15",
+        "price": "4500",
+        "category": "FUTBOL",
+        "description": "camiseta 2023 adidas alternativa river tecnologia adicero",
+        "image": "river_camiseta_alter.jpeg",
+        "type_category": "visited"
     }
-   ]
+]

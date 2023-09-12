@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/detail.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    </head>
+<body>
+    <%- include('../partials/header')%>
+
+    <main>
+        <section class="product-detail">
+            <h4>Detalle del Producto</h4>
+            <div class="container-title"><%= productFound.name %></div>
+            <article class="articulo_detalle">
+                <div class="container-img">
+                    <img class="imagen_detalle" src="/images/productsImg/<%= productFound.image %>" alt="">
+                </div>
+                <div class="container-info-product">
+                    <div class="container-price">
+                        <span>$ <%= productFound.price %></span>
+                    </div>
+                    <div class="description">
+                        <p><%= productFound.description %></p>
+                    </div>
+                    <div class="discount">
+                        <p><%= productFound.discount %> %</p>
+                    </div>
+                    <button id="buy-button">Comprar</button>
+                    <a href="/products/edit/<%= productFound.id %>" class="action-button edit">
+                        <button>EDITAR PRODUCTO</button>
+                    </a>
+                    <form action="/products/delete/<%= productFound.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
+                    <script>
+                        document.getElementById("buy-button").addEventListener("click", function() {
+                        // Aquí puedes agregar el código para manejar la acción de compra
+                        alert("Producto comprado!");
+                        });
+                    </script>
+                </div>
+            </article>
+        </section>
+    </main>
+    <div style="clear: both;"></div>
+    <%- include('../partials/footer')%>
+</body>
+</html>
