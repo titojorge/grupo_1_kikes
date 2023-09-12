@@ -13,6 +13,7 @@ p, a{
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 .encabezado{
     display: inline-block;
     background-color: rgba(25, 10, 110, 0.899);
@@ -56,6 +57,8 @@ p, a{
     top: 2px;
     right: 28px;
 }
+=======
+>>>>>>> 37cd263fafd42d8b6648b1d55645d55a6bbe69ad
 .comment-fixed{
     position: fixed;
     right: 30px;
@@ -64,26 +67,7 @@ p, a{
 .fa-comments{
     font-size: 70px;
 }
-footer{
-    width: 100%;
-    background-color: rgba(25, 10, 110, 0.899);
-}
-.footer{
-    display: flex;
-    justify-content: space-around;
-}
-.footer2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.footer2 p, a{
-    padding:  10px 15px;
-}
-.img {
-    width: 80vw;
-    margin: auto;
-}
+
 .galeria_fotos_fila {
     width: 100%;
     overflow: hidden;
