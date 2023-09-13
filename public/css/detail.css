@@ -1,3 +1,7 @@
+*{
+	position: relative;
+}
+
 .articulo_detalle {
     display: flex;
 }
@@ -40,4 +44,12 @@
 }
 .container-info-product p{
     color:rgba(0, 0, 0, 0.899)
+}
+.comment-fixed{
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+}
+.fa-comments{
+    font-size: 70px;
 }
