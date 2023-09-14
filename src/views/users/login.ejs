@@ -10,8 +10,8 @@
     <%- include('../partials/header')%>
     
     <section class="login-form">
-        <h3>INICIO DE SESION</h3>
         <form action="procesar_INICIO.php" method="post">
+            <h3>INICIO DE SESION</h3>
 
             <div class="input-form">
                 <label for="email">Correo Electrónico:</label>
@@ -22,6 +22,11 @@
                 <label for="contrasenia">Contraseña:</label>
                 <input type="password" id="contrasenia" name="contrasenia" required>
             </div>
+
+            <span class="forget">
+                <label for=""><input type="checkbox">  Recordar mi sesion.</label>
+                <a class="forget-password" href="#">Olvidé mi contraseña.</a>
+            </span>
             
             <div class="input-form">
                 <input type="submit" value="Entrar">

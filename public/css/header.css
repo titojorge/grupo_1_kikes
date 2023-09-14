@@ -2,8 +2,9 @@
     margin: 0px;
     padding: 0px;    
     box-sizing: border-box;
+    position: relative;
 }
-p, a{
+p , a{
     color:  rgba(255, 255, 255, 0.899);
     text-decoration: none;
 }
@@ -19,6 +20,8 @@ p, a{
     padding: 10px 20px;
     justify-content: space-around;
     align-items: center;
+    color:  rgba(255, 255, 255, 0.899);
+    text-decoration: none;
 }
 .encabezado-3{
     font-size: 13px;
@@ -32,11 +35,16 @@ p, a{
 .ingresa{
     margin: 0px 10px;
     background-color: rgba(0, 0, 0, 0.899);
-
+    padding:  10px 15px;
+    color:  rgba(255, 255, 255, 0.899);
+    text-decoration: none;
 }
 .crea{
     margin: 0px 10px;
     background-color: rgba(0, 0, 0, 0.899);
+    padding:  10px 15px;
+    color:  rgba(255, 255, 255, 0.899);
+    text-decoration: none;
 }
 .busqueda{
     color: aliceblue;
@@ -46,9 +54,9 @@ p, a{
     height: 32px;
     max-width: 230px;
 }
-
 .fa-search{
     position: relative;
     top: 2px;
     right: 28px;
+    color: black;
 }
