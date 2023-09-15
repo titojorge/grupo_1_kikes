@@ -11,15 +11,15 @@ function getProducts(){
 }
 function addProduct(product){
     products.push(product);
-    const productsString = JSON.stringify(products, null,4);
+    const productsString = JSON.stringify(products, null, 4);
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
 }
 function  updateProducts(){
-    const productsString = JSON.stringify(products, null,4)
+    const productsString = JSON.stringify(products, null, 4)
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
 }
 function deleteProducts(productsNuevos){
-	const productsString = JSON.stringify(productsNuevos, null,4)
+	const productsString = JSON.stringify(productsNuevos, null, 4)
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
 }
 

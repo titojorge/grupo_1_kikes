@@ -1,3 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+    position: relative;
+}
+p , a{
+    color:  rgba(255, 255, 255, 0.899);
+    text-decoration: none;
+}
 .encabezado{
     display: inline-block;
     background-color: rgba(25, 10, 110, 0.899);
@@ -7,27 +17,34 @@
     font-family: 'Hind Siliguri', sans-serif;
     display: flex;
     margin: 0px 10px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     justify-content: space-around;
     align-items: center;
+    color:  rgba(255, 255, 255, 0.899);
+    text-decoration: none;
 }
 .encabezado-3{
     font-size: 13px;
     display: flex;
     position: relative;
-    top: 5px;
+    top: 15px;
     right: 15px;
     justify-content: flex-end;
-    margin: 0px 15px;
+    margin: 10px 15px;
 }
 .ingresa{
     margin: 0px 10px;
     background-color: rgba(0, 0, 0, 0.899);
-
+    padding:  10px 15px;
+    color:  rgba(255, 255, 255, 0.899);
+    text-decoration: none;
 }
 .crea{
     margin: 0px 10px;
     background-color: rgba(0, 0, 0, 0.899);
+    padding:  10px 15px;
+    color:  rgba(255, 255, 255, 0.899);
+    text-decoration: none;
 }
 .busqueda{
     color: aliceblue;
@@ -39,6 +56,7 @@
 }
 .fa-search{
     position: relative;
-    left: 220px;
-
+    top: 2px;
+    right: 28px;
+    color: black;
 }
