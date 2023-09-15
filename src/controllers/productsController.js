@@ -11,15 +11,15 @@ function getProducts(){
 }
 function addProduct(product){
     products.push(product);
-    const productsString = JSON.stringify(products);
+    const productsString = JSON.stringify(products, null,4);
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
 }
 function  updateProducts(){
-    const productsString = JSON.stringify(products)
+    const productsString = JSON.stringify(products, null,4)
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
 }
 function deleteProducts(productsNuevos){
-	const productsString = JSON.stringify(productsNuevos)
+	const productsString = JSON.stringify(productsNuevos, null,4)
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
 }
 
@@ -57,9 +57,10 @@ const controller = {
 	store: (req, res) => {
 		const form = req.body;
 		const nameFile = req.file.filename;
+		const pos = products.length-1;
 
         const newProduct = {
-            id: products.length + 1 ,
+            id: products[pos].id + 1 ,
             name: form.name,
             discount: form.discount,
             price: form.price,

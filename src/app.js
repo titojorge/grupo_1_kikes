@@ -6,7 +6,6 @@ const productsRouter = require('./routes/products');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 //config
-
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
