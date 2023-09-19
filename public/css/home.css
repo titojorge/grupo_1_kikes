@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+html,
+body {
+    margin: 0;
+}
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+/* colores de letras fuente */
+p, a{
+    color:  rgba(255, 255, 255, 0.899);
+    text-decoration: none;
+}
+
+=======
+>>>>>>> 6bf754699ce5ee35e748148630b9471ccd5d5fff
 .comment-fixed{
     position: fixed;
     right: 30px;
