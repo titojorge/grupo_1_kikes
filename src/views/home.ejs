@@ -8,7 +8,11 @@
     </head>
 <body>
     <%- include('./partials/header')%>
-    
+    <section>
+        <% if (userFound) { %>
+        <p> <%= userFound.Nombre + '-' + userFound.Apellido  %></p>
+        <% } %>
+    </section>
     <main>
         <section class="img">
             <div class="galeria_fotos_fila">

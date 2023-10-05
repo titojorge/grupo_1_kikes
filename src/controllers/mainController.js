@@ -1,22 +1,73 @@
 const fs = require('fs');
 const path = require('path');
-
+const multer = require('multer');
+const usersFilePath = path.join(__dirname, '../data/user.json');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const bcrypt = require('bcryptjs');
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'public/images/perfiles');
+    },
+    filename: (req, file, cb) => {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        cb(null, file.fieldname + '-' + uniqueSuffix + '.' + file.originalname.split('.').pop());
+    }
+});
+const upload = multer({ storage: storage }).single('imagen_perfil');
 
 const mainController = {
     home: (req, res) => {
-        return res.render('home', { products : products});
-        //res.sendFile(path.join(__dirname, '../views/home.html'));
+        return res.render('home', { products: products });
     },
     login: (req, res) => {
         return res.render('./users/login');
-        //res.sendFile(path.resolve(__dirname, '../views/login.html'));
+    },
+    save_login: (req, res) => {
+        let email_form = req.body.email;
+        let pass_form = req.body.contrasenia;
+        let user_found = users.filter( elem => elem.Email == email_form)
+        if(user_found) {
+            let check = (pass_form == user_found.Contrasenia) ? true : false;
+            //let check = bcrypt.compareSync(pass_form, user_found.Contrasenia)
+            if (check == true){
+            //if (check ){    
+                req.session.id = user_found.Identificador;
+                req.session.nombre = user_found.Nombre;
+                req.session.apellido = user_found.Apellido;
+                res.render('home', {userFound: user_found})
+                console.log('exito');
+            } else {
+                res.render('./users/login', {msj: 'error'})
+                console.log('fracaso');
+            }
+        }
+        
+
     },
     register: (req, res) => {
         return res.render('./users/register');
-        //res.sendFile(path.resolve(__dirname, '../views/register.html'));
     },
+    upload: (req, res, err) => {
+            if (err) {
+                return res.send('Error al subir el archivo.');
+            }
+            const { nombre, apellido, email, contrasenia } = req.body;
+            const imagen = req.file ? '/images/perfiles/' + req.file.filename : '';
+            const newUser = {
+                Identificador: users.length + 1,
+                Nombre: nombre,
+                Apellido: apellido,
+                Email: email,
+                Contrasenia: contrasenia,
+                Categoria: "Customer",
+                Imagen: imagen
+            };
+            users.push(newUser);
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
+            return res.redirect('/');
+        }
 }
-
 module.exports = mainController;
