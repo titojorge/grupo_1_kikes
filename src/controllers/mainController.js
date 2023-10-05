@@ -5,6 +5,7 @@ const usersFilePath = path.join(__dirname, '../data/user.json');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const bcrypt = require('bcryptjs');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -23,6 +24,28 @@ const mainController = {
     },
     login: (req, res) => {
         return res.render('./users/login');
+    },
+    save_login: (req, res) => {
+        let email_form = req.body.email;
+        let pass_form = req.body.contrasenia;
+        let user_found = users.filter( elem => elem.Email == email_form)
+        if(user_found) {
+            let check = (pass_form == user_found.Contrasenia) ? true : false;
+            //let check = bcrypt.compareSync(pass_form, user_found.Contrasenia)
+            if (check == true){
+            //if (check ){    
+                req.session.id = user_found.Identificador;
+                req.session.nombre = user_found.Nombre;
+                req.session.apellido = user_found.Apellido;
+                res.render('home', {userFound: user_found})
+                console.log('exito');
+            } else {
+                res.render('./users/login', {msj: 'error'})
+                console.log('fracaso');
+            }
+        }
+        
+
     },
     register: (req, res) => {
         return res.render('./users/register');

@@ -8,9 +8,13 @@
     </head>
 <body>
     <%- include('../partials/header')%>
-    
+    <section>
+        <% if (msj) { %>
+        <p> <%= msj  %></p>
+        <% } %>
+    </section>
     <section class="login-form">
-        <form action="procesar_INICIO.php" method="post">
+        <form action="/login" method="post">
             <h3>INICIO DE SESION</h3>
 
             <div class="input-form">
@@ -24,7 +28,7 @@
             </div>
 
             <span class="forget">
-                <label for=""><input type="checkbox">  Recordar mi sesion.</label>
+                <label for=""><input type="checkbox" name="checkbox">  Recordar mi sesion.</label>
                 <a class="forget-password" href="#">Olvidé mi contraseña.</a>
             </span>
             
