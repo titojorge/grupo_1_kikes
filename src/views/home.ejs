@@ -9,8 +9,8 @@
 <body>
     <%- include('./partials/header')%>
     <section>
-        <% if (userFound) { %>
-        <p> <%= userFound.Nombre + '-' + userFound.Apellido  %></p>
+        <% if (userFound[0]) { %>
+        <p style="color: black;"> <%= userFound[0].Nombre + '-' + userFound[0].Apellido %></p>
         <% } %>
     </section>
     <main>

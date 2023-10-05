@@ -20,7 +20,7 @@ const upload = multer({ storage: storage }).single('imagen_perfil');
 
 const mainController = {
     home: (req, res) => {
-        return res.render('home', { products: products });
+        return res.render('home', { products: products,userFound:'' });
     },
     login: (req, res) => {
         return res.render('./users/login');
@@ -28,19 +28,22 @@ const mainController = {
     save_login: (req, res) => {
         let email_form = req.body.email;
         let pass_form = req.body.contrasenia;
+
         let user_found = users.filter( elem => elem.Email == email_form)
         if(user_found) {
-            let check = (pass_form == user_found.Contrasenia) ? true : false;
-            //let check = bcrypt.compareSync(pass_form, user_found.Contrasenia)
-            if (check == true){
-            //if (check ){    
-                req.session.id = user_found.Identificador;
-                req.session.nombre = user_found.Nombre;
-                req.session.apellido = user_found.Apellido;
-                res.render('home', {userFound: user_found})
+            console.log(pass_form);
+            console.log(user_found[0].Contrasenia);
+            let check = (pass_form == user_found[0].Contrasenia) ? true : false;
+            //let check = bcrypt.compareSync(pass_form, user_found[0].Contrasenia)
+            if (check ){    
+                req.session.id = user_found[0].Identificador;
+                req.session.nombre = user_found[0].Nombre;
+                req.session.apellido = user_found[0].Apellido;
+                res.cookie('id',user_found[0].Identificador );
+                res.render('home', {products:products,userFound: user_found})
                 console.log('exito');
             } else {
-                res.render('./users/login', {msj: 'error'})
+                res.render('./users/login')
                 console.log('fracaso');
             }
         }
