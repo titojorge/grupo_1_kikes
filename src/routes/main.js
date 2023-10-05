@@ -20,6 +20,7 @@ router.get('/', mainController.home)
 router.get('/home', mainController.home)
 router.get('/login', mainController.login)
 router.get('/register', mainController.register);
+router.post('/register', mainController.upload);
 router.get('/detail',productsController.detail)
 router.get('/productCart',productsController.productCart)
 

@@ -25,7 +25,9 @@ const mainController = {
         return res.render('./users/login');
     },
     register: (req, res) => {
-        upload(req, res, (err) => {
+        return res.render('./users/register');
+    },
+    upload: (req, res, err) => {
             if (err) {
                 return res.send('Error al subir el archivo.');
             }
@@ -43,7 +45,6 @@ const mainController = {
             users.push(newUser);
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
             return res.redirect('/');
-        });
-    },
+        }
 }
 module.exports = mainController;
