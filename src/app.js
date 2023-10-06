@@ -12,9 +12,11 @@ const cookierParser = require('cookie-parser')
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false })); // Formularios sean procesados
 app.use(express.json());
-app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-app.use(session( {secret: "Nuestro mensaje secreto"}));
 app.use(cookierParser());
+app.use(session( {secret: "Nuestro mensaje secreto"}));
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+
+
 
 //config ejs
 app.set('view engine', 'ejs');
