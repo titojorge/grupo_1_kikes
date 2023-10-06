@@ -1,0 +1,48 @@
+.products_oferta{
+    display: flex;
+}
+.comment-fixed{
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+}
+.fa-comments{
+    font-size: 70px;
+}
+.new-form{
+    background-color: (255,0,0);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.new-form h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-form{
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 40%;
+}
+input[type="text"],
+input[type="file"],
+input[type="number"]{
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #1259c3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 450ms;
+}
+button[type="submit"]:hover {
+    background-color: #0022AA;
+}
