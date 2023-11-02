@@ -31,13 +31,14 @@ const mainController = {
 
         let user_found = users.filter(elem => elem.Email == email_form)
         if (user_found && user_found.length > 0) {
-            const check = bcrypt.compareSync(pass_form, user_found[0].Contrasenia);
-
+            //const check = bcrypt.compareSync(pass_form, user_found[0].Contrasenia);
+            const check = user_found[0].Contrasenia == pass_form? true : false;
             if (check) {
-                req.session.id = user_found[0].Identificador;
+                req.session.id_usuario = user_found[0].Identificador;
                 req.session.nombre = user_found[0].Nombre;
                 req.session.apellido = user_found[0].Apellido;
                 res.cookie('id', user_found[0].Identificador);
+                res.cookie('nombreUser', user_found[0].Nombre);
                 res.render('home', { products: products, userFound: user_found })
                 console.log('exito');
             } else {
@@ -71,6 +72,12 @@ const mainController = {
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
         return res.redirect('/');
+    },
+    cerrar: (req, res) => {
+        if (req.session.id_usuario) {
+            req.session.destroy();
+            return res.redirect('/login')
+        }
     }
 }
 
