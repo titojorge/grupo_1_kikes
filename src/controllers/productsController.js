@@ -1,5 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -27,8 +31,12 @@ function deleteProducts(productsNuevos){
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
-		const products = getProducts();
-		res.render('./products/products', {products : products})
+		//const products = getProducts();
+		db.Product.findAll()
+            .then(products => {
+                res.render('./products/products', {products})
+            })
+		//res.render('./products/products', {products : products})
 	},
 
 	// Detail - Detail from one product
