@@ -27,5 +27,5 @@ app.set('views', path.join(__dirname, './views'));
 app.use('/', mainRouter)
 app.use('/products', productsRouter)
 app.listen(3000, () => {
-  console.log("Success");
+  console.log("Success puerto 3000");
 });

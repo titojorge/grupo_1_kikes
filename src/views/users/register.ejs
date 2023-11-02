@@ -43,12 +43,16 @@
             </div>
 
             <div class="input-form">
+                <label for="categoria">Categoria:</label>
+                <select class="fecha-inputs" name="categoria">
+                    <option value="Admin">Administrador</option>
+                    <option value="Customer">Cliente</option>
+                </select>
+            </div>
+            <div class="input-form">
                 <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                <div class="fecha-inputs">
-                    <input type="number" id="dia" name="dia" placeholder="Día" required>
-                    <input type="number" id="mes" name="mes" placeholder="Mes" required>
-                    <input type="number" id="anio" name="anio" placeholder="Año" required>    
-                </div>
+                <input type="date" class="fecha-inputs" name="fecha_nacimiento">
+                </input>
             </div>
             <div class="input-form">
                 <label for="imagen_perfil">Imagen de Perfil:</label>
