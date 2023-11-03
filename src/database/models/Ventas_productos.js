@@ -1,27 +1,25 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Venta';
+    let alias = 'Venta_producto';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
-        usuario_id: {
+        venta_id: {
             type: dataTypes.BIGINT(10),
             allowNull: false
         },
-        fecha_venta: {
-            type: dataTypes.DATEONLY,
+        producto_id: {
+            type: dataTypes.BIGINT(10),
             allowNull: false
         },
-        total: {
+        cantidad: {
+            type: dataTypes.BIGINT(10),
+            allowNull: false
+        },
+        subtotal: {
             type: dataTypes.DECIMAL(10,2),
-            allowNull: false
-        },
-        status: {
-            type: dataTypes.STRING(45),
             allowNull: false
         },
         fecha_creacion: {
@@ -40,22 +38,21 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         timestamps: false,
-        tableName: 'ventas'
+        tableName: 'venta_productos'
     }
-    const Venta = sequelize.define(alias, cols, config); 
+    const VentaProducto = sequelize.define(alias, cols, config); 
 
-    Venta.associate = function(models){
-        Venta.belongsTo(models.Usuario, {
-            as: "Usuarios",
-            foreignKey: "usuario_id"
-        })
-    }
-    Venta.associate = function(models){
-        Venta.hasMany(models.Venta_producto, {
-            as: "VentaProducto",
+    VentaProducto.associate = function(models){
+        VentaProducto.belongsTo(models.Venta, {
+            as: "Ventas",
             foreignKey: "venta_id"
         })
     }
-
-    return Venta;
+    VentaProducto.associate = function(models){
+        VentaProducto.belongsTo(models.Product, {
+            as: "Producto",
+            foreignKey: "producto_id"
+        })
+    }
+    return VentaProducto;
 };
