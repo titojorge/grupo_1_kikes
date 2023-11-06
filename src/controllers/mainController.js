@@ -7,17 +7,6 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcrypt = require('bcryptjs');
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'public/images/perfiles');
-    },
-    filename: (req, file, cb) => {
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-        cb(null, file.fieldname + '-' + uniqueSuffix + '.' + file.originalname.split('.').pop());
-    }
-});
-const upload = multer({ storage: storage }).single('imagen_perfil');
-
 const mainController = {
     home: (req, res) => {
         return res.render('home', { products: products, userFound: '' });
@@ -53,9 +42,9 @@ const mainController = {
     register: (req, res) => {
         return res.render('./users/register');
     },
-    upload: (req, res, err) => {
+    save: (req, res, err) => {
         if (err) {
-            return res.send('Error al subir el archivo.');
+            console.log(err)
         }
         const { nombre, apellido, email, contrasenia } = req.body;
         const hashedPassword = bcrypt.hashSync(contrasenia, 10); //PROBANDO EL Bcrypt
@@ -72,7 +61,7 @@ const mainController = {
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
         return res.redirect('/');
-    },
+        },
     cerrar: (req, res) => {
         if (req.session.id_usuario) {
             req.session.destroy();

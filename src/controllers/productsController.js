@@ -80,6 +80,8 @@ const controller = {
 
         addProduct(newProduct);
         res.redirect('/products/list');
+
+		
 	},
 
 	// Update - Form to edit

@@ -6,7 +6,8 @@ const mainRouter = require('./routes/main')
 const productsRouter = require('./routes/products');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
-const cookierParser = require('cookie-parser') 
+const cookierParser = require('cookie-parser');
+const upload = multer ({ dest: './public/images/perfiles'})//PRUEBA MULTER
 
 //config
 app.use(express.static(path.join(__dirname, "../public")));
@@ -15,8 +16,6 @@ app.use(express.json());
 app.use(cookierParser());
 app.use(session( {secret: "Nuestro mensaje secreto"}));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-
-
 
 //config ejs
 app.set('view engine', 'ejs');
@@ -29,3 +28,9 @@ app.use('/products', productsRouter)
 app.listen(3000, () => {
   console.log("Success puerto 3000");
 });
+
+app.use(session({
+  secret: 'Nuestro mensaje secreto',
+  resave: true,
+  saveUninitialized: true
+}));

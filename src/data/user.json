@@ -493,5 +493,14 @@
     "Identificador": 87,
     "Categoria": "Customer",
     "Imagen": ""
+  },
+  {
+    "Identificador": 88,
+    "Nombre": "Juan",
+    "Apellido": "Gomez",
+    "Email": "hopemid180@eazenity.com",
+    "Contrasenia": "$2a$10$E2Fw7r2cr3WZRiIi6fnXweDmmf6Qkod2XEQVxmih36FTQIbsVEdF2",
+    "Categoria": "Customer",
+    "Imagen": ""
   }
 ]
