@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include('../partials/head') %>
-        <link rel="stylesheet" href="/css/header.css">
-        <link rel="stylesheet" href="/css/new.css">
-        <link rel="stylesheet" href="/css/footer.css">
-    </head>
+
+<head>
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/new.css">
+  <link rel="stylesheet" href="/css/footer.css">
+</head>
+
 <body>
-    <%- include('../partials/header')%>
-    
-    <section class="new-form">
-        <h1>Nuevo Producto</h1>
-        <form action="/products/new" method="POST" enctype="multipart/form-data">
+  <%- include('../partials/header')%>
 
-        <div class="input-form">
-            <label for="name">Nombre del producto:</label>
-            <input type="text" name="name" value=""><br>
-        </div>
-
-        <div class="input-form">
-            <label for="description">Descripción:</label>
-            <textarea name="description"></textarea><br>
-        </div>
-
-        <div class="input-form">
-            <label for="image-product">Imagen:</label>
-            <input type="file" name="image-product"><br>
-        </div>
-
-        <div class="input-form">
-            <label for="category">Categoría:</label>
-            <input type="text" name="category" value=""><br>
-        </div>
-
-        <div class="input-form">
-            <label for="type_category">Tipo de Categoría:</label>
-            <select name="type_category" id="type_category" >
-                <option value="in-sale">En Oferta</option>
-                <option value="visited">Visitado</option>
-            </select><br>
-        </div>
-
-        <div class="input-form">
-            <label for="price">Precio:</label>
-            <input type="number" name="price" step="0.01" value=""><br>
-        </div>
-
-        <div class="input-form">
-            <label for="discount">Descuento:</label>
-            <input type="text" name="discount" value=""><br>
-        </div>
-
-        <div class="input-form">
-            <button type="submit">Guardar</button>
-        </div>
-        </form>
-    </section>
-    <%- include('../partials/footer')%>
+  <section class="new-form">
+    <h1>Nuevo Producto</h1>
+    <form action="/products/new" method="POST" enctype="multipart/form-data">
+      <div class="input-form">
+        <label for="name">Nombre del producto:</label>
+        <input type="text" name="name" value=""><br>
+      </div>
+      <div class="input-form">
+        <label for="description">Descripción:</label>
+        <textarea name="description"></textarea><br>
+      </div>
+      <div class="input-form">
+        <label for="image-product">Imagen:</label>
+        <input type="file" name="image-product"><br>
+      </div>
+      <div class="input-form">
+        <label for="category_producto_id">Categoría de producto:</label>
+        <select name="category_producto_id">
+            <% for( let i = 0; i < categorias.length; i++ ) { %>
+                <option value="<%= categorias[i].id %>"><%= categorias[i].id %> - <%=categorias[i].nombre %> </option>
+            <% } %>
+        </select>
+      </div>
+      <div class="input-form">
+        <label for="stock">Stock:</label>
+        <input type="number" name="stock" step="1" value=""><br>
+      </div>
+      <div class="input-form">
+        <label for="type_category">Tipo de Categoría:</label>
+        <select name="type_category" id="type_category">
+          <option value="in-sale">En Oferta</option>
+          <option value="visited">Visitado</option>
+        </select><br>
+      </div>
+      <div class="input-form">
+        <label for="price">Precio:</label>
+        <input type="number" name="price" step="0.01" value=""><br>
+      </div>
+      <div class="input-form">
+        <label for="discount">Descuento:</label>
+        <input type="number" name="discount" step="1" value=""><br>
+      </div>
+      <div class="input-form">
+        <button type="submit">Guardar</button>
+      </div>
+    </form>
+  </section>
+  <%- include('../partials/footer')%>
 </body>
+
 </html>

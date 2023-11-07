@@ -42,7 +42,7 @@ CREATE TABLE `categoria_productos` (
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `price` decimal(2,0) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
   `discount` int(11) NOT NULL,
   `category_producto_id` int(11) NOT NULL,
   `description` varchar(250) NOT NULL,

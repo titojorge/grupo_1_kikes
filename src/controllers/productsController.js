@@ -3,6 +3,7 @@ const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const moment = require("moment");
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -41,10 +42,14 @@ const controller = {
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-		const idProduct = req.params.id;
-		const productFound = products.filter( elem => elem.id == idProduct)
+		db.Product.findByPk(req.params.id)
+		.then((product) => {
+			res.render('./products/detail', { productFound: product });
+		  });
+		//const idProduct = req.params.id;
+		//const productFound = products.filter( elem => elem.id == idProduct)
         //return res.render('./products/detail')
-		res.render('./products/detail', {productFound: productFound[0]})
+		//res.render('./products/detail', {productFound: productFound[0]})
 	},
 
     productCart: (req, res) => {
@@ -52,7 +57,10 @@ const controller = {
         //res.sendFile(path.resolve(__dirname, '../views/productCart.html'));
     },
     new: (req, res) => {
-        return res.render('./products/new');
+		db.CategoryProduct.findAll()
+		.then( categorias => {
+			return res.render('./products/new', { categorias });
+		})
         //res.sendFile(path.join(__dirname, '../views/home.html'));
     },
 
@@ -64,24 +72,23 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 		const form = req.body;
+		console.log(req.file.filename);
 		const nameFile = req.file.filename;
-		const pos = products.length-1;
-
-        const newProduct = {
-            id: products[pos].id + 1 ,
-            name: form.name,
-            discount: form.discount,
+		db.Product.create({
+			nombre: form.name,
             price: form.price,
-			category: form.category,
+			discount: form.discount,
+			category_producto_id: form.category_producto_id,
 			description: form.description,
 			image: nameFile,
-			type_category: form.type_category
-        }
-
-        addProduct(newProduct);
-        res.redirect('/products/list');
-
-		
+			type_category: form.type_category,
+			stock: form.stock,
+			fecha_creacion: new Date().toLocaleDateString(),
+			fecha_modificacion: new Date().toLocaleDateString()
+		  }).then((newProduct) => {
+			console.log(newProduct);
+			res.redirect("/products/list");
+		  });
 	},
 
 	// Update - Form to edit
