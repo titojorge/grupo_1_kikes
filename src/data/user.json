@@ -502,5 +502,41 @@
     "Contrasenia": "$2a$10$E2Fw7r2cr3WZRiIi6fnXweDmmf6Qkod2XEQVxmih36FTQIbsVEdF2",
     "Categoria": "Customer",
     "Imagen": ""
+  },
+  {
+    "Identificador": 89,
+    "Nombre": "Gonzalo",
+    "Apellido": "Gomez",
+    "Email": "hopemid180@eazenity.com",
+    "Contrasenia": "$2a$10$BqPyPlNJufizpyBc5Kz3kuidW4Ox9EPfGq943knH5hK3S.rbGxhgK",
+    "Categoria": "Customer",
+    "Imagen": ""
+  },
+  {
+    "Identificador": 90,
+    "Nombre": "Gonzalo",
+    "Apellido": "Gomez",
+    "Email": "hopemid180@eazenity.com",
+    "Contrasenia": "$2a$10$m8wLNgVhMwxUNnAP.uczyeRoPCT5h2K.nbSw2M9Q04cxqJAImAQma",
+    "Categoria": "Customer",
+    "Imagen": ""
+  },
+  {
+    "Identificador": 91,
+    "Nombre": "Gonzalo",
+    "Apellido": "Gomez",
+    "Email": "hopemid180@eazenity.com",
+    "Contrasenia": "$2a$10$FUX/7.T.hBL5KgOTp1pH9egI1GBsGMz.tGRfjT9KAQGmyxKyfMAZ2",
+    "Categoria": "Customer",
+    "Imagen": ""
+  },
+  {
+    "Identificador": 92,
+    "Nombre": "Gonzalo",
+    "Apellido": "Gomez",
+    "Email": "hopemid180@eazenity.com",
+    "Contrasenia": "$2a$10$Z3wGVCLDofjnQrYlBoA.HuqoNWWlbWYM31qqomCSa0PKUJJX0ntvi",
+    "Categoria": "Customer",
+    "Imagen": ""
   }
 ]

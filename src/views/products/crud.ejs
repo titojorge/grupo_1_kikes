@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+<!-- PRUEBA DE CRUD PROBAR -->
+<body>
+    <%- include('../partials/header')%>
+    <h1>CRUD de Productos</h1>
+
+    <!-- Formulario para Crear Producto -->
+    <h2>Crear Producto</h2>
+    <form action="/products/edit/<%= productFound.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="input-form">
+            <label for="name">Nombre del producto:</label>
+            <input type="text" name="name" value=""><br>
+        </div>
+        <div class="input-form">
+            <label for="price">Precio:</label>
+            <input type="number" name="price" step="0.01" value=""><br>
+        </div>
+
+        <div class="input-form">
+            <label for="discount">Descuento:</label>
+            <input type="text" name="discount" value=""><br>
+        </div>
+        <div class="input-form">
+            <label for="type_category">Tipo de Categoría:</label>
+            <select name="type_category" id="type_category" >
+                <option value="in-sale">En Oferta</option>
+                <option value="visited">Visitado</option>
+            </select><br>
+        </div>
+        <div class="input-form">
+            <label for="description">Descripción:</label>
+            <textarea name="description"></textarea><br>
+        </div>
+        <div class="input-form">
+            <label for="image-product">Imagen:</label>
+            <input type="file" name="image-product"><br>
+        </div>
+        <div class="input-form">
+            <label for="category">Categoría:</label>
+            <input type="text" name="category" value=""><br>
+        </div>
+        <div class="input-form">
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+
+    <!-- Formulario para Editar Producto -->
+    <h2>Editar Producto</h2>
+    <form action="/productos/edit" method="POST">
+        <label for="name">Nombre del producto:</label>
+            <input type="text" name="name" value="<%= productFound.name  %>"><br>
+            <label for="description">Descripción:</label>
+            <textarea name="description"><%= productFound.description  %></textarea><br>
+            <label for="image-product">Imagen:</label>
+            <input type="file" name="image-product"><br>
+            <label for="category">Categoría:</label>
+            <input type="text" name="category" value="<%=  productFound.category  %>"><br>
+            <label for="type_category">Tipo de Categoría:</label>
+            <select name="type_category" id="type_category" value="<%=  productFound.type_category %>">
+                <% if (productFound.type_category == 'in-sale' ) { %>
+                    <option value="in-sale" selected>En Oferta</option>
+                    <option value="visited">Visitado</option>
+                <% } else { %>
+                    <option value="in-sale" >En Oferta</option>
+                    <option value="visited" selected>Visitado</option>
+                <% } %>
+            </select>
+            <label for="price">Precio:</label>
+            <input type="number" name="price" step="0.01" value="<%=  productFound.price %>"><br>
+            <label for="discount">Descuento:</label>
+            <input type="text" name="discount" value="<%=  productFound.discount %>"><br>
+            <button type="submit">Guardar</button>
+        <!-- Agregar el resto de campos si es que funciona pero primero tenemos que probar (nombre, precio, descuento, etc.) -->
+
+        <button type="submit">Editar Producto</button>
+    </form>
+
+    <!-- Formulario para Eliminar Producto -->
+    <h2>Eliminar Producto</h2>
+    <form action="/productos/delete" method="POST">
+        <label for="id_delete">Numero o Id del Producto a Eliminar:</label>
+        <input type="number" name="id" required><br>
+
+        <button type="submit">Eliminar Producto</button>
+    </form>
+
+    <!-- Lista de Productos -->
+    <h2>Listado de Productos</h2>
+    <ul>
+        <% productos.forEach(producto => { %>
+            <li>
+                ID: <%= producto.id %> | Nombre: <%= producto.nombre %> | Precio: <%= producto.price %> | Stock: <%= producto.stock %>
+            </li>
+        <% }); %>
+    </ul>
+
+    <%- include('../partials/footer')%>
+</body>
+
+</html>

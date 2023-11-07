@@ -48,7 +48,7 @@ const mainController = {
         }
         const { nombre, apellido, email, contrasenia } = req.body;
         const hashedPassword = bcrypt.hashSync(contrasenia, 10); //PROBANDO EL Bcrypt
-        const imagen = req.file ? '/images/perfiles/' + req.file.filename : '';
+        const imagen = req.file ? '/images/perfiles/' + req.file.filename: '';
         const newUser = {
             Identificador: users.length + 1,
             Nombre: nombre,
@@ -56,7 +56,7 @@ const mainController = {
             Email: email,
             Contrasenia: hashedPassword,//PRUEBA
             Categoria: "Customer",
-            Imagen: imagen
+            Imagen: imagen,
         };
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');

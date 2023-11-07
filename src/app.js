@@ -14,7 +14,11 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false })); // Formularios sean procesados
 app.use(express.json());
 app.use(cookierParser());
-app.use(session( {secret: "Nuestro mensaje secreto"}));
+app.use(session({
+  secret: 'Nuestro mensaje secreto',
+  resave: true,
+  saveUninitialized: true
+}));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 //config ejs
@@ -29,8 +33,3 @@ app.listen(3000, () => {
   console.log("Success puerto 3000");
 });
 
-app.use(session({
-  secret: 'Nuestro mensaje secreto',
-  resave: true,
-  saveUninitialized: true
-}));

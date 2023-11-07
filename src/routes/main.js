@@ -3,7 +3,7 @@ const router = express.Router();
 const mainController = require('../controllers/mainController');
 const productsController = require('../controllers/productsController');
 const guestMiddleware = require('../middlewares/guestMiddleware');
-const uploadFile = require('./middlewares/userMulter');
+const uploadFile = require('../middlewares/userMulter');
 
 // Rutas que se acceden sin login
 router.get('/', mainController.home)

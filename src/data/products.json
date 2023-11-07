@@ -118,5 +118,15 @@
         "description": "asdasdkaskdak kdaskd a",
         "image": "1694741125217-botines-de-futsal-adidas-predator-accuracy-3-naranja.jpg",
         "type_category": "visited"
+    },
+    {
+        "id": 14,
+        "name": "1",
+        "discount": "10.000",
+        "price": "100.000",
+        "category": "calzado",
+        "description": "zapas hombre araña",
+        "image": "1699336008414-adidas-ultra-4d-spider-man-2-3.jpg",
+        "type_category": "in-sale"
     }
 ]
