@@ -11,6 +11,12 @@ const mainController = {
     home: (req, res) => {
         return res.render('home', { products: products, userFound: '' });
     },
+    edit: (req, res) => {
+        return res.render('./users/editUser');
+    },
+    details: (req, res) => {
+        return res.render('./users/details');
+    },
     login: (req, res) => {
         return res.render('./users/login');
     },

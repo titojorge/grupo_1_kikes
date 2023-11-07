@@ -13,6 +13,7 @@ router.post('/login', mainController.save_login)
 router.get('/register', mainController.register);
 router.post('/register', mainController.save);
 router.post('/register', uploadFile.single('imagen'), mainController.save);
+router.get('/editUser',mainController.edit);
 router.get('/detail', productsController.detail);
 router.get('/cerrar-sesion', mainController.cerrar);
 
