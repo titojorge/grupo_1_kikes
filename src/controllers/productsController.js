@@ -68,6 +68,9 @@ const controller = {
 	create: (req, res) => {
 		res.render('product-create-form')
 	},
+	crud: (req, res) => {
+		res.render('./products/crud.ejs')
+	},
 	
 	// Create -  Method to store
 	store: (req, res) => {

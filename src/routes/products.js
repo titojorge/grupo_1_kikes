@@ -32,5 +32,7 @@ router.put('/edit/:id', guestMiddleware ,upload.single('image-product'),products
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', guestMiddleware ,productsController.destroy); 
 
+router.get('/crud/' ,productsController.crud); 
+
 
 module.exports = router;
