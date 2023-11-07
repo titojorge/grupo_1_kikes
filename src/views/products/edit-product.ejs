@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('../partials/head') %>
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/new.css">
+  <link rel="stylesheet" href="/css/footer.css">
 </head>
+
 <body>
-    <%- include('../partials/header')%>
-        <h1>Editar Producto </h1>
-        <form action="/products/edit/<%= productFound.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <label for="name">Nombre del producto:</label>
-            <input type="text" name="name" value="<%= productFound.name  %>"><br>
-            <label for="description">Descripción:</label>
-            <textarea name="description"><%= productFound.description  %></textarea><br>
-            <label for="image-product">Imagen:</label>
-            <input type="file" name="image-product"><br>
-            <label for="category">Categoría:</label>
-            <input type="text" name="category" value="<%=  productFound.category  %>"><br>
-            <label for="type_category">Tipo de Categoría:</label>
-            <select name="type_category" id="type_category" value="<%=  productFound.type_category %>">
-                <% if (productFound.type_category == 'in-sale' ) { %>
-                    <option value="in-sale" selected>En Oferta</option>
-                    <option value="visited">Visitado</option>
-                <% } else { %>
-                    <option value="in-sale" >En Oferta</option>
-                    <option value="visited" selected>Visitado</option>
-                <% } %>
-            </select>
-            <label for="price">Precio:</label>
-            <input type="number" name="price" step="0.01" value="<%=  productFound.price %>"><br>
-            <label for="discount">Descuento:</label>
-            <input type="text" name="discount" value="<%=  productFound.discount %>"><br>
-            <button type="submit">Guardar</button>
-        </form>
-    <%- include('../partials/footer')%>
-    </body>
+  <%- include('../partials/header')%>
+  <h1>Editar Producto </h1>
+  <form action="/products/edit/<%= productFound.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <label for="name">Nombre del producto:</label>
+    <input type="text" name="name" value="<%= productFound.nombre  %>"><br>
+    <label for="description">Descripción:</label>
+    <textarea name="description"><%= productFound.description  %></textarea><br>
+    <label for="image-product">Imagen:</label>
+    <input type="file" name="image-product"><br>
+    <label for="category_producto_id">Categoría de producto:</label>
+    <select name="category_producto_id">
+    <% for( let i = 0; i < categorias.length; i++ ) { %>
+      <% if( productFound.category_producto_id == categorias[i].id){ %>
+      <option value="<%= categorias[i].id %>" selected><%= categorias[i].id %> - <%=categorias[i].nombre %> </option>
+      <% } else{ %>
+      <option value="<%= categorias[i].id %>" ><%= categorias[i].id %> - <%=categorias[i].nombre %>
+        <% } %>
+    <% } %>
+    </select>
+    <label for="type_category">Tipo de Categoría:</label>
+    <select name="type_category" id="type_category" value="<%=  productFound.type_category %>">
+      <% if (productFound.type_category == 'in-sale' ) { %>
+      <option value="in-sale" selected>En Oferta</option>
+      <option value="visited">Visitado</option>
+      <% } else { %>
+      <option value="in-sale">En Oferta</option>
+      <option value="visited" selected>Visitado</option>
+      <% } %>
+    </select>
+    <label for="price">Precio:</label>
+    <input type="number" name="price" step="0.01" value="<%=  productFound.price %>"><br>
+    <label for="discount">Descuento:</label>
+    <input type="number" name="discount" step="1" value="<%=  productFound.discount %>"><br>
+    <button type="submit">Guardar</button>
+  </form>
+  <%- include('../partials/footer')%>
+</body>
+
 </html>

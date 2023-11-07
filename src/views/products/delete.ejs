@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/new.css">
+    <link rel="stylesheet" href="/css/footer.css">
+  </head>
+  
+  <body>
+    <%- include('../partials/header')%>
+    <h1>Eliminar Producto </h1>
+    <h4>¿Estas seguro de querer borrar el producto : <%= product.nombre %>?</h4>
+    <p>
+        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+            <br>
+            <div> 
+                <button class="botonBorrar" type="submit">Borrar el Producto</button>
+            </div>
+            <div>
+                <a style="color: blue" class="botonVolver" href="/products/list">Listado de Productos</a>
+            </div>
+        </form>
+    </p>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

@@ -31,9 +31,9 @@
                     <a href="/products/edit/<%= productFound.id %>" class="action-button edit">
                         <button>EDITAR PRODUCTO</button>
                     </a>
-                    <form action="/products/delete/<%= productFound.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
-                    </form>
+                    <a style="color: blue; text-decoration: underline;" class="action-button delete" href="/products/delete/<%= productFound.id %>" style="display: block">
+                        ELIMINAR
+                    </a>
                     <script>
                         document.getElementById("buy-button").addEventListener("click", function() {
                         // Aquí puedes agregar el código para manejar la acción de compra

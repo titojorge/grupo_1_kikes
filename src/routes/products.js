@@ -30,7 +30,8 @@ router.post('/new', guestMiddleware ,upload.single('image-product'),productsCont
 router.get('/edit/:id', guestMiddleware ,productsController.edit)  
 router.put('/edit/:id', guestMiddleware ,upload.single('image-product'),productsController.update);   
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/:id', guestMiddleware ,productsController.destroy); 
+router.get('/delete/:id' ,productsController.delete); 
+router.delete('/delete/:id',productsController.destroy); 
 
 router.get('/crud/' ,productsController.crud); 
 

@@ -75,7 +75,6 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 		const form = req.body;
-		console.log(req.file.filename);
 		const nameFile = req.file.filename;
 		db.Product.create({
 			nombre: form.name,
@@ -96,48 +95,55 @@ const controller = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		const idProduct = req.params.id
-        //busco el producto
-        const productFound = products.find(function(elem){
-            return elem.id == idProduct
-        })
-        res.render('./products/edit-product', { productFound: productFound });
+		let promesaCategoria = db.CategoryProduct.findAll()
+		let promesaProductFound = db.Product.findByPk(req.params.id)
+
+		Promise.all([promesaCategoria,promesaProductFound])
+		.then(function ([categorias, product]) {
+			res.render('./products/edit-product', { productFound: product, categorias });
+		  });
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		const id = req.params.id
-        const form = req.body;
-		const nameFile = req.file.filename;
-
-        //busco el producto
-        const productFound = products.find(function(elem){
-            return elem.id == id
-        })
-        
-        //modifico el producto en el listado correspondiente
-        productFound.name = form.name;
-        productFound.description = form.description;
-        productFound.price = form.price;
-		productFound.discount = form.discount;
-		productFound.category = form.category;
-		productFound.image = nameFile;
-		productFound.type_category = form.type_category;
-
-        //actualizar el json
-        updateProducts()
-
-        res.redirect('/products/list');
+		form = req.body;
+		nameFile = req.file.filename;
+		db.Product.update(
+			{
+				nombre: form.name,
+				price: form.price,
+				discount: form.discount,
+				category_producto_id: form.category_producto_id,
+				description: form.description,
+				image: nameFile,
+				type_category: form.type_category,
+				stock: form.stock,
+				fecha_modificacion: new Date().toLocaleDateString()
+			},
+			{
+			  where: {
+				id: req.params.id,
+			  },
+			}
+		  ).then(() => {
+			res.redirect('/products/list');
+		  });
 	},
-
+	delete: function (req, res) {
+		db.Product.findByPk(req.params.id).then((product) => {
+		  res.render("./products/delete.ejs", { product });
+		});
+	  },
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-		const idProduct = req.params.id;
-
-		const productsNuevos = products.filter( elem => elem.id != idProduct );
-
-		deleteProducts(productsNuevos);
-
-		res.redirect('/products/list');
+		db.Product.destroy({
+			where: {
+			  id: req.params.id,
+			},
+		  })
+		  .then(() => {
+			res.redirect('/products/list');
+		  })
+		  .catch( error => console.log(error));
 	}
 };
 
