@@ -1,3 +1,51 @@
+RETROSPECTIVA SPRINT 6:
+
+- Comenzar a hacer:
+* Fomentar un mayor trabajo en equipo, promoviendo mas comunicación.
+* Consulta más con el grupo cuando surjan dudas en el código.
+* Conocernos personalmente
+
+- Hacer más:
+* Trabajar mas con CRUD, sequelize y ordenamiento del proyecto.
+* Mejoras en el estilo CSS del sitio para una mejor experiencia de usuario.
+* Consultar a los profesores.
+
+- Continuar haciendo:
+* Notificando novedades y manteniendo un alto compromiso con el equipo.
+* Seguir programando reuniones de organización de los sprints.
+* Cumplir con los plazos establecidos en los sprints.
+
+- Hacer menos:
+* No comunicar dificultades o impedimientos que surgan.
+* Evitar retrasar el avance del proyecto.
+
+- Dejar de hacer:
+* Procrastinar.
+
+RETROSPECTIVA SPRINT 5:
+
+- Comenzar a hacer:
+* Fomentar un mayor trabajo en equipo, promoviendo mas comunicación.
+* Consulta más con el grupo cuando surjan dudas en el código.
+* Conocernos personalmente
+
+- Hacer más:
+* Trabajar mas con Middleware.
+* Mejoras en el estilo CSS del sitio para una mejor experiencia de usuario.
+* Consultar a los profesores.
+
+- Continuar haciendo:
+* Notificando novedades y manteniendo un alto compromiso con el equipo.
+* Seguir programando reuniones de organización de los sprints.
+* Cumplir con los plazos establecidos en los sprints.
+
+- Hacer menos:
+* No comunicar dificultades o impedimientos que surgan.
+* Evitar retrasar el avance del proyecto.
+
+- Dejar de hacer:
+* Procrastinar.
+
 RETROSPECTIVA SPRINT 4:
 
 - Comenzar a hacer:
@@ -6,7 +54,7 @@ RETROSPECTIVA SPRINT 4:
 * Utilizar Trello de manera más frecuente y efectiva.
 
 - Hacer más:
-* Trabajar mas con CRUD.
+* Trabajar mas con CRUD y los metodos HTTP.
 * Mejoras en el estilo CSS del sitio para una mejor experiencia de usuario.
 * Consultar a los profesores.
 
