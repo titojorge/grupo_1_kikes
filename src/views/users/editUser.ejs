@@ -13,7 +13,7 @@
     
     <section class="edit-form">
         <h1>Editar Usuario</h1>
-        <form action="/editUser/<%= user.id %>?_method=PUT" method="POST">
+        <form action="/editUser/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="input-form">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" value="<%= user.nombre %>" required>

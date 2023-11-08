@@ -79,7 +79,7 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `contrasenia` varchar(50) NOT NULL,
+  `contrasenia` varchar(100) NOT NULL,
   `categoria` varchar(50) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
   `sexo` varchar(50) NOT NULL,

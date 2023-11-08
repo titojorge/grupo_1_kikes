@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const mainRouter = require('./routes/main')
+const usersRouter = require('./routes/users')
 const productsRouter = require('./routes/products');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
@@ -28,6 +29,7 @@ app.set('views', path.join(__dirname, './views'));
 
 //rutas
 app.use('/', mainRouter)
+app.use('/', usersRouter)
 app.use('/products', productsRouter)
 app.listen(3000, () => {
   console.log("Success puerto 3000");

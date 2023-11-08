@@ -1,23 +1,11 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
-const multer = require('multer');
 const path = require('path');
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
 const guestMiddleware = require('../middlewares/guestMiddleware')
-
-/*configurar MULTER*/
-const storage = multer.diskStorage({
-    destination: function(req, file, cb){
-        cb(null,path.join(__dirname,'../../public/images/productsImg'))
-    },
-    filename: function(req,file,cb){
-        const fileNameNew = Date.now() + '-'+ path.basename(file.originalname);
-        cb(null,fileNameNew)
-    }
-})
-const upload = multer({ storage : storage})
+const upload = require('../middlewares/productMulter');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/list', productsController.index);

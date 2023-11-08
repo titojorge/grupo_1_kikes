@@ -5,30 +5,6 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const moment = require("moment");
 
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-function getProducts(){
-	const productsFilePath = path.join(__dirname, '../data/products.json');
-	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-	return products;
-}
-function addProduct(product){
-    products.push(product);
-    const productsString = JSON.stringify(products, null, 4);
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
-}
-function  updateProducts(){
-    const productsString = JSON.stringify(products, null, 4)
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
-}
-function deleteProducts(productsNuevos){
-	const productsString = JSON.stringify(productsNuevos, null, 4)
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), productsString);
-}
-
-
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
@@ -37,33 +13,23 @@ const controller = {
             .then(products => {
                 res.render('./products/products', {products})
             })
-		//res.render('./products/products', {products : products})
 	},
-
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id)
 		.then((product) => {
 			res.render('./products/detail', { productFound: product });
 		  });
-		//const idProduct = req.params.id;
-		//const productFound = products.filter( elem => elem.id == idProduct)
-        //return res.render('./products/detail')
-		//res.render('./products/detail', {productFound: productFound[0]})
 	},
-
     productCart: (req, res) => {
         return res.render('productCart');
-        //res.sendFile(path.resolve(__dirname, '../views/productCart.html'));
     },
     new: (req, res) => {
 		db.CategoryProduct.findAll()
 		.then( categorias => {
 			return res.render('./products/new', { categorias });
 		})
-        //res.sendFile(path.join(__dirname, '../views/home.html'));
     },
-
 	// Create - Form to create
 	create: (req, res) => {
 		res.render('product-create-form')
@@ -71,8 +37,6 @@ const controller = {
 	crud: (req, res) => {
 		res.render('./products/crud.ejs')
 	},
-	
-	// Create -  Method to store
 	store: (req, res) => {
 		const form = req.body;
 		const nameFile = req.file.filename;
@@ -92,8 +56,6 @@ const controller = {
 			res.redirect("/products/list");
 		  });
 	},
-
-	// Update - Form to edit
 	edit: (req, res) => {
 		let promesaCategoria = db.CategoryProduct.findAll()
 		let promesaProductFound = db.Product.findByPk(req.params.id)

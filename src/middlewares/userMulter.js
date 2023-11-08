@@ -9,7 +9,5 @@ let storage = multer.diskStorage({
             cb(null, fileName)
     }
 })
-
 const upload = multer({storage: storage})
-
 module.exports = upload
