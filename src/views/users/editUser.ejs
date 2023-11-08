@@ -13,25 +13,73 @@
     
     <section class="edit-form">
         <h1>Editar Usuario</h1>
-        <form action="/users/edit/<%= user.id %>" method="POST">
-
+        <form action="/editUser/<%= user.id %>?_method=PUT" method="POST">
             <div class="input-form">
-                <label for="name">Nombre:</label>
-                <input type="text" name="name" value="<%= user.name %>" required><br>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="<%= user.nombre %>" required>
             </div>
-
+            <div class="input-form">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" value="<%= user.apellido %>" required>
+            </div>
             <div class="input-form">
                 <label for="email">Correo Electrónico:</label>
-                <input type="email" name="email" value="<%= user.email %>" required><br>
+                <input type="email" id="email" name="email" value="<%= user.email %>" required>
+            </div>
+            <div class="input-form">
+                <label for="confirmar_email">Confirmar Correo Electrónico:</label>
+                <input type="email" id="confirmar_email" name="confirmar_email" value="<%= user.email %>" required>
+            </div>
+            <div class="input-form">
+                <label for="contrasenia">Contraseña:</label>
+                <input type="password" id="contrasenia" name="contrasenia" required>
+            </div>
+            <div class="input-form">
+                <label for="confirmar_contrasenia">Confirmar Contraseña:</label>
+                <input type="password" id="confirmar_contrasenia" name="confirmar_contrasenia" required>
+            </div>
+            <div class="input-form">
+                <label for="categoria">Categoria:</label>
+                <select class="fecha-inputs" name="categoria">
+                    <% if (user.categoria == 'Admin' ) { %>
+                        <option value="Admin" selected>Administrador</option>
+                        <option value="Customer">Cliente</option>
+                        <% } else { %>
+                        <option value="Admin">Administrador</option>
+                        <option value="Customer" selected>Cliente</option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="input-form">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" class="fecha-inputs" name="fecha_nacimiento" value="<%= user.fecha_nacimiento %>">
+                </input>
+            </div>
+            <div class="input-form">
+                <label for="sexo">Sexo:</label>
+                <select class="fecha-inputs" name="sexo">
+                    <% if (user.sexo == 'M' ) { %>
+                        <option value="M" selected>Masculino</option>
+                        <option value="F">Femenino</option>
+                        <option value="O">Otro</option>
+                        <% } else { if(user.sexo == 'F') { %>
+                            <option value="M" >Masculino</option>
+                            <option value="F" selected>Femenino</option>
+                            <option value="O">Otro</option>
+                    <% }  else {  %>
+                        <option value="M" >Masculino</option>
+                        <option value="F" >Femenino</option>
+                        <option value="O" selected>Otro</option>
+                    <% }   } %>
+                </select>
+            </div>
+            <div class="input-form">
+                <label for="imagen_perfil">Imagen de Perfil:</label>
+                <input type="file" name="imagen_perfil" />           
             </div>
 
             <div class="input-form">
-                <label for="password">Nueva Contraseña:</label>
-                <input type="password" name="password"><br>
-            </div>
-
-            <div class="input-form">
-                <button type="submit">Guardar Cambios</button>
+                <input type="submit" value="Editar">
             </div>
         </form>
     </section>

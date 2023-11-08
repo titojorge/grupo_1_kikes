@@ -42,15 +42,15 @@ module.exports = (sequelize, dataTypes) => {
         },
         fecha_creacion: {
             type: dataTypes.DATEONLY,
-            allowNull: false
+            allowNull: true
         },
         fecha_modificacion: {
             type: dataTypes.DATEONLY,
-            allowNull: false
+            allowNull: true
         },
         fecha_borrado: {
             type: dataTypes.DATEONLY,
-            allowNull: false
+            allowNull: true
         },
 
     };

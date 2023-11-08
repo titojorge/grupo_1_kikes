@@ -10,11 +10,16 @@ router.get('/', mainController.home)
 router.get('/home', mainController.home)
 router.get('/login', mainController.login)
 router.post('/login', mainController.save_login)
+//Crear USUARIO
 router.get('/register', mainController.register);
-router.post('/register', mainController.save);
 router.post('/register', uploadFile.single('imagen'), mainController.save);
-router.get('/editUser',mainController.edit);
-router.get('/detail', productsController.detail);
+//EDITAR USUARIO
+router.get('/editUser/:id',mainController.edit);
+router.put('/editUser/:id',mainController.update);
+
+router.get('/users', mainController.listUsers);
+router.get('/detailUser/:id', mainController.details);
+
 router.get('/cerrar-sesion', mainController.cerrar);
 
 // Rutas con login

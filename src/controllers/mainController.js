@@ -6,16 +6,60 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcrypt = require('bcryptjs');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const moment = require("moment");
 
 const mainController = {
     home: (req, res) => {
         return res.render('home', { products: products, userFound: '' });
     },
     edit: (req, res) => {
-        return res.render('./users/editUser');
+        db.Usuario.findByPk(req.params.id)
+        .then(user => {
+            return res.render('./users/editUser', { user });
+        })
+        
     },
+    update: (req, res) => {
+		form = req.body;
+		const imagen = req.file ? '/images/perfiles/' + req.file.filename: '';
+        const hashedPassword = bcrypt.hashSync(form.contrasenia, 10);
+		db.Usuario.update(
+			{
+				nombre: form.nombre,
+                apellido: form.apellido,
+                email: form.email,
+                contrasenia: hashedPassword,
+                categoria: form.categoria,
+                fecha_nacimiento: form.fecha_nacimiento,
+                sexo: form.sexo,
+                imagen: imagen,
+                fecha_modificacion: new Date().toLocaleDateString()
+			},
+			{
+			  where: {
+				id: req.params.id,
+			  },
+			}
+		  ).then(() => {
+			res.redirect('/');
+		  });
+	},
     details: (req, res) => {
-        return res.render('./users/details');
+        db.Usuario.findByPk(req.params.id)
+        .then( user => {
+            return res.render('./users/details', { user });
+        })
+        
+    },
+    listUsers: (req, res) => {
+        db.Usuario.findAll()
+        .then( users => {
+            return res.render('./users/users.ejs' , { users });
+        })
+        
     },
     login: (req, res) => {
         return res.render('./users/login');
@@ -52,21 +96,40 @@ const mainController = {
         if (err) {
             console.log(err)
         }
-        const { nombre, apellido, email, contrasenia } = req.body;
-        const hashedPassword = bcrypt.hashSync(contrasenia, 10); //PROBANDO EL Bcrypt
-        const imagen = req.file ? '/images/perfiles/' + req.file.filename: '';
-        const newUser = {
-            Identificador: users.length + 1,
-            Nombre: nombre,
-            Apellido: apellido,
-            Email: email,
-            Contrasenia: hashedPassword,//PRUEBA
-            Categoria: "Customer",
-            Imagen: imagen,
-        };
-        users.push(newUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
-        return res.redirect('/');
+
+        const form = req.body;
+		const imagen = req.file ? '/images/perfiles/' + req.file.filename: '';
+        const hashedPassword = bcrypt.hashSync(form.contrasenia, 10);
+
+		db.Usuario.create({
+			nombre: form.nombre,
+            apellido: form.apellido,
+			email: form.email,
+			contrasenia: hashedPassword,
+			categoria: form.categoria,
+			fecha_nacimiento: form.fecha_nacimiento,
+			sexo: form.sexo,
+			imagen: imagen,
+			fecha_creacion: new Date().toLocaleDateString(),
+			fecha_modificacion: new Date().toLocaleDateString()
+		  }).then((newUser) => {
+			console.log(newUser);
+			return res.redirect('/');
+		  });
+
+        
+        // const newUser = {
+        //     Identificador: users.length + 1,
+        //     Nombre: nombre,
+        //     Apellido: apellido,
+        //     Email: email,
+        //     Contrasenia: hashedPassword,//PRUEBA
+        //     Categoria: "Customer",
+        //     Imagen: imagen,
+        // };
+        // users.push(newUser);
+        // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
+        
         },
     cerrar: (req, res) => {
         if (req.session.id_usuario) {

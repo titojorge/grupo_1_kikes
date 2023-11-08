@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+<body>
+    <%- include('../partials/header')%>
+    
+    <main>
+        <section class="users">
+            <h2>Todos los usuarios</h2>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <article class="users-list">
+                    <% users.forEach(function(elem) { %>
+                        <div class="user-elem">
+                            <a href="/editUser/<%= elem.id %>">
+                                <img class="imagen_perfil" src="/images/perfiles/<%= elem.image %>" alt="">
+                                <p style="color:blue"><b>Nombre</b></p>
+                                <p style="color:blue"><%= elem.nombre %></p>
+                                <p style="color:blue"><b>Apellido:</b>  <%= elem.apellido %></p>
+                                <a href="/editUser/<%= elem.id %>"><button>Editar</button></a>
+                            </a>
+                        </div>
+                    <% }) %>
+                </article>
+            </div>
+            <a class="comment-fixed" href="#">
+                <i class="far fa-comments fa-spin"></i>
+            </a>
+        </section>
+    
+
+    </main>
+    <%- include('../partials/footer')%>
+</body>
+</html>
