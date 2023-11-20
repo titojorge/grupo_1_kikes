@@ -4,6 +4,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const moment = require("moment");
+const { validationResult } = require('express-validator')
 
 const controller = {
 	// Root - Show all products
@@ -27,7 +28,7 @@ const controller = {
     new: (req, res) => {
 		db.CategoryProduct.findAll()
 		.then( categorias => {
-			return res.render('./products/new', { categorias });
+			return res.render('./products/new', { categorias, errors: '', oldData: '' });
 		})
     },
 	// Create - Form to create
@@ -39,22 +40,32 @@ const controller = {
 	},
 	store: (req, res) => {
 		const form = req.body;
-		const nameFile = req.file.filename;
-		db.Product.create({
-			nombre: form.name,
-            price: form.price,
-			discount: form.discount,
-			category_producto_id: form.category_producto_id,
-			description: form.description,
-			image: nameFile,
-			type_category: form.type_category,
-			stock: form.stock,
-			fecha_creacion: new Date().toLocaleDateString(),
-			fecha_modificacion: new Date().toLocaleDateString()
-		  }).then((newProduct) => {
-			console.log(newProduct);
-			res.redirect("/products/list");
-		  });
+		const nameFile = (req.file) ? req.file.filename : '';
+		let resultValidation = validationResult(req)
+		if(resultValidation.errors.length > 0){
+			let errores = resultValidation.mapped()
+			console.log(errores);
+			db.CategoryProduct.findAll()
+			.then( categorias => {
+				return res.render('./products/new', { categorias, errors: errores, oldData: req.body })
+			})
+		} else {
+			db.Product.create({
+				nombre: form.name,
+				price: form.price,
+				discount: form.discount,
+				category_producto_id: form.category_producto_id,
+				description: form.description,
+				image: nameFile,
+				type_category: form.type_category,
+				stock: form.stock,
+				fecha_creacion: new Date().toLocaleDateString(),
+				fecha_modificacion: new Date().toLocaleDateString()
+			  }).then((newProduct) => {
+				console.log(newProduct);
+				res.redirect("/products/list");
+			  });
+		}
 	},
 	edit: (req, res) => {
 		let promesaCategoria = db.CategoryProduct.findAll()
