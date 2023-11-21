@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/home.css">
         <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/users.css">
     </head>
 <body>
     <%- include('../partials/header')%>
@@ -17,11 +18,12 @@
                     <% users.forEach(function(elem) { %>
                         <div class="user-elem">
                             <a href="/editUser/<%= elem.id %>">
-                                <img class="imagen_perfil" src="/images/perfiles/<%= elem.image %>" alt="">
-                                <p style="color:blue"><b>Nombre</b></p>
-                                <p style="color:blue"><%= elem.nombre %></p>
-                                <p style="color:blue"><b>Apellido:</b>  <%= elem.apellido %></p>
-                                <a href="/editUser/<%= elem.id %>"><button>Editar</button></a>
+                                <img class="imagen_perfil" src="<%= elem.imagen %>" height="150px" width="150px" alt="">
+                                <p class="parrafo" ><b>Nombre:</b></p>
+                                <p class="parrafo2" ><%= elem.nombre %></p>
+                                <p class="parrafo" ><b>Apellido:</b> </p>
+                                <p class="parrafo2"><%= elem.apellido %></p>
+                                <a href="/editUser/<%= elem.id %>"><button class="button">Editar</button></a>
                             </a>
                         </div>
                     <% }) %>

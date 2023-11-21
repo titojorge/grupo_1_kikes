@@ -1,0 +1,19 @@
+.user-elem{
+    margin: 10px 10px;
+    display: inline-block;
+    border: 2px solid black;
+    width: 20%;
+    padding: 10px 10px;
+}
+.button{
+    padding: 5px 50px;
+    margin: 5px 10px;
+}
+.parrafo{
+    color: black;
+    margin: 10px 5px;
+}
+.parrafo2{
+    color: blue;
+    margin: 10px 5px;
+}

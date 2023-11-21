@@ -83,7 +83,7 @@ CREATE TABLE `usuarios` (
   `categoria` varchar(50) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
   `sexo` varchar(50) NOT NULL,
-  `imagen` varchar(50) NOT NULL,
+  `imagen` varchar(100) NOT NULL,
   `fecha_creacion` date DEFAULT NULL,
   `fecha_modificacion` date DEFAULT NULL,
   `fecha_borrado` date DEFAULT NULL
