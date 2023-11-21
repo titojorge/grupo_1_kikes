@@ -6,6 +6,7 @@ const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const moment = require("moment");
+const { validationResult } = require('express-validator');
 const uploadFile = require('../middlewares/userMulter');
 
 const usersController = {
@@ -19,21 +20,26 @@ const usersController = {
     const form = req.body;
     const imagenNew = req.file ? "/images/perfiles/" + req.file.filename : "";
     const hashedPassword = bcrypt.hashSync(form.contrasenia, 10);
-    db.Usuario.create({
-      nombre: form.nombre,
-      apellido: form.apellido,
-      email: form.email,
-      contrasenia: hashedPassword,
-      categoria: form.categoria,
-      fecha_nacimiento: form.fecha_nacimiento,
-      sexo: form.sexo,
-      imagen: imagenNew,
-      fecha_creacion: new Date().toLocaleDateString(),
-      fecha_modificacion: new Date().toLocaleDateString(),
-    }).then((newUser) => {
-      console.log(newUser);
-      return res.redirect("/");
-    });
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      db.Usuario.create({
+        nombre: form.nombre,
+        apellido: form.apellido,
+        email: form.email,
+        contrasenia: hashedPassword,
+        categoria: form.categoria,
+        fecha_nacimiento: form.fecha_nacimiento,
+        sexo: form.sexo,
+        imagen: imagenNew,
+        fecha_creacion: new Date().toLocaleDateString(),
+        fecha_modificacion: new Date().toLocaleDateString(),
+      }).then((newUser) => {
+        console.log(newUser);
+        return res.redirect("/");
+      });
+    } else {
+      res.render("./users/register", { errors: errors.mapped(), old: form });
+    }
   },
   edit: (req, res) => {
     db.Usuario.findByPk(req.params.id).then((user) => {
