@@ -1,3 +1,27 @@
+RETROSPECTIVA SPRINT 7:
+
+- Comenzar a hacer:
+* Fomentar un mayor trabajo en equipo, promoviendo mas comunicación.
+* Conocernos personalmente
+
+- Hacer más:
+* Trabajar mas con express-validator, con javascript validadciones en el frontend y ordenamiento del proyecto.
+* Mejoras en el estilo CSS del sitio para una mejor experiencia de usuario.
+* Consultar a los profesores.
+
+- Continuar haciendo:
+* Notificando novedades y manteniendo un alto compromiso con el equipo.
+* Seguir programando reuniones de organización de los sprints.
+* Cumplir con los plazos establecidos en los sprints.
+
+- Hacer menos:
+* No comunicar dificultades o impedimientos que surgan.
+* Evitar retrasar el avance del proyecto.
+
+- Dejar de hacer:
+* Procrastinar.
+
+
 RETROSPECTIVA SPRINT 6:
 
 - Comenzar a hacer:
