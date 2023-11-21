@@ -11,7 +11,7 @@ const uploadFile = require('../middlewares/userMulter');
 
 const usersController = {
   register: (req, res) => {
-    return res.render("./users/register");
+    return res.render("./users/register", {errors: ''});
   },
   save: (req, res, err) => {
     if (err) {
@@ -20,8 +20,15 @@ const usersController = {
     const form = req.body;
     const imagenNew = req.file ? "/images/perfiles/" + req.file.filename : "";
     const hashedPassword = bcrypt.hashSync(form.contrasenia, 10);
-    let errors = validationResult(req);
-    if (errors.isEmpty()) {
+    let validateRegister = validationResult(req);
+    if (validateRegister.errors.length > 0) {
+      let errores = validateRegister.mapped()
+			console.log(errores);
+			db.Usuario.findAll()
+			.then( usuario => {
+				return res.render('./users/register', { usuario, errors: errores, oldData: form })
+			})
+    } else {
       db.Usuario.create({
         nombre: form.nombre,
         apellido: form.apellido,
@@ -37,8 +44,6 @@ const usersController = {
         console.log(newUser);
         return res.redirect("/");
       });
-    } else {
-      res.render("./users/register", { errors: errors.mapped(), old: form });
     }
   },
   edit: (req, res) => {

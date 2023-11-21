@@ -41,6 +41,9 @@ input[type="submit"]:hover {
     background-color: #0022AA;
 }
 
-.feedback{
-    color: #ac0606;
+.text-danger{
+    color: red;
+    font-weight: bold;
+    background-color: pink;
+    border-radius: 10px;
 }

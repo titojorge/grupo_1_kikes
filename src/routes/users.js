@@ -6,10 +6,10 @@ const validateRegister = require('../middlewares/validateRegister');
 
 //Crear USUARIO
 router.get('/register', usersController.register);
-router.post('/register', uploadFile.single('imagen_perfil'), usersController.save);
+router.post('/register', uploadFile.single('imagen_perfil'), validateRegister ,usersController.save);
 //EDITAR USUARIO
 router.get('/editUser/:id',usersController.edit);
-router.put('/editUser/:id',uploadFile.single('imagen_perfil') , validateRegister ,usersController.update);
+router.put('/editUser/:id',uploadFile.single('imagen_perfil') ,usersController.update);
 
 router.get('/users', usersController.listUsers);
 router.get('/detailUser/:id', usersController.details);
