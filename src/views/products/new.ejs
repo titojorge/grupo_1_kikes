@@ -14,10 +14,10 @@
 
   <section class="new-form">
     <h1>Nuevo Producto</h1>
-    <form action="/products/new" method="POST" enctype="multipart/form-data">
+    <form action="/products/new" method="POST" id="form_product" enctype="multipart/form-data">
       <div class="input-form">
         <label for="name">Nombre del producto:</label>
-        <input type="text" name="name" value="<%= oldData.name %>"><br>
+        <input type="text" name="name" id="name" value="<%= oldData.name %>"><br>
         <% if( errors.name) { %>
           <div class="text-danger"> 
             <%= errors.name.msg %>
@@ -26,7 +26,7 @@
       </div>
       <div class="input-form">
         <label for="description">Descripción:</label>
-        <textarea name="description" ><%= oldData.description %></textarea><br>
+        <textarea name="description" id="description"><%= oldData.description %></textarea><br>
         <% if(errors.description) { %>
           <div class="text-danger"> 
             <%= errors.description.msg %>
@@ -35,7 +35,7 @@
       </div>
       <div class="input-form">
         <label for="image_product">Imagen:</label>
-        <input type="file" name="image_product" value="<%= oldData.image_product %>"><br>
+        <input type="file" name="image_product" id="image_product" value="<%= oldData.image_product %>"><br>
         <% if(errors.image_product) { %>
           <div class="text-danger"> 
             <%= errors.image_product.msg %>
@@ -44,7 +44,7 @@
       </div>
       <div class="input-form">
         <label for="category_producto_id">Categoría de producto:</label>
-        <select name="category_producto_id">
+        <select name="category_producto_id" id="category_producto_id">
             <% for( let i = 0; i < categorias.length; i++ ) { %>
                 <% if(oldData.category_producto_id == categorias[i].id) { %>
                   <option value="<%= categorias[i].id %>" selected><%= categorias[i].id %> - <%=categorias[i].nombre %> </option>  
@@ -61,7 +61,7 @@
       </div>
       <div class="input-form">
         <label for="stock">Stock:</label>
-        <input type="number" name="stock" step="1" value="<%= oldData.stock %>"><br>
+        <input type="number" name="stock" id="stock" step="1" value="<%= oldData.stock %>"><br>
         <% if(errors.stock) { %>
           <div class="text-danger"> 
             <%= errors.stock.msg %>
@@ -87,7 +87,7 @@
       </div>
       <div class="input-form">
         <label for="price">Precio:</label>
-        <input type="number" name="price" step="0.01" value="<%= oldData.price %>"><br>
+        <input type="number" name="price" id="price" step="0.01" value="<%= oldData.price %>"><br>
         <% if(errors.price) { %>
           <div class="text-danger"> 
             <%= errors.price.msg %>
@@ -96,12 +96,17 @@
       </div>
       <div class="input-form">
         <label for="discount">Descuento:</label>
-        <input type="number" name="discount" step="1" value="<%= oldData.discount %>"><br>
+        <input type="number" name="discount" id="discount" step="1" value="<%= oldData.discount %>"><br>
         <% if(errors.discount) { %>
           <div class="text-danger"> 
             <%= errors.discount.msg %>
           </div>
         <% } %>
+      </div>
+      <div>
+        <ul class="text-danger">
+            
+        </ul>
       </div>
       <div class="input-form">
         <button type="submit">Guardar</button>
@@ -109,6 +114,7 @@
     </form>
   </section>
   <%- include('../partials/footer')%>
+  <script src="/js/validateCreateProductF.js"></script>
 </body>
 
 </html>
