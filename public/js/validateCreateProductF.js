@@ -1,7 +1,5 @@
 window.onload = function () {
     let form = document.querySelector("#form_product");
-
-    const allFields = document.querySelectorAll(".field");
     const ulError = document.querySelector(".text-danger");
   
     form.addEventListener("submit", function (event) {

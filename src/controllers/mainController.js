@@ -38,7 +38,7 @@ const mainController = {
                     req.session.nombre = user_found[0].nombre;
                     req.session.apellido = user_found[0].apellido;
                     res.cookie('id', user_found[0].id);
-                    res.cookie('nombreUser', user_found[0].nombre);
+                    res.cookie('nameUser', user_found[0].nombre);
                     res.render('home', { products: products, userFound: user_found })
                     console.log('exito');
                 } else {

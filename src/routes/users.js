@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const usersController = require('../controllers/usersController');
-const guestMiddleware = require('../middlewares/guestMiddleware');
 const uploadFile = require('../middlewares/userMulter');
 
 //Crear USUARIO
