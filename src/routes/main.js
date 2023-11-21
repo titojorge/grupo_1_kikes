@@ -8,7 +8,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 router.get('/', mainController.home)
 router.get('/home', mainController.home)
 router.get('/login', mainController.login)
-router.post('/login', mainController.save_login)
+router.post('/login', validateLogin, mainController.save_login)
 
 router.get('/cerrar-sesion', mainController.cerrar);
 // Rutas con login
