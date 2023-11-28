@@ -16,7 +16,7 @@
             <div class="input-form">
                 <label for="email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" required>
-                <% if( errors.email) { %>
+                <% if(errors.email) { %>
                     <div class="text-danger"> 
                       <%= errors.email.msg %>
                     </div>

@@ -1,3 +1,4 @@
+/**------CONFIGURACIONES------*/
 const multer = require('multer'); // Multer, probando MULTER
 const express = require("express");
 const path = require("path");
@@ -10,7 +11,7 @@ const session = require('express-session');
 const cookierParser = require('cookie-parser');
 const upload = multer ({ dest: './public/images/perfiles'})//PRUEBA MULTER
 
-//config
+/**------METODOS DE APLICACION GLOBAL------*/
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false })); // Formularios sean procesados
 app.use(express.json());
@@ -22,16 +23,14 @@ app.use(session({
 }));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
-//config ejs
+/**------METODOS DE INSTANCIA EJS------*/
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 
-
-//rutas
+/**------RUTAS------*/
 app.use('/', mainRouter)
 app.use('/', usersRouter)
 app.use('/products', productsRouter)
 app.listen(3000, () => {
   console.log("Success puerto 3000");
 });
-
