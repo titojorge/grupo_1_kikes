@@ -13,5 +13,32 @@ window.onload = function () {
         let inputPassword = document.getElementById('contrasenia');
         let inputConfirmarPassword = document.getElementById('confirmar_contrasenia');
         
+        if(inputName.value == ''){
+            errors.push({
+                    field: inputName.name,
+                    msg: "Campo Vacio!"
+                })
+          } else{
+                if(inputName.value.length < 2){
+                    errors.push({
+                        field: inputName.name,
+                        msg: "El campo debe tener al menos 2 caracteres"
+                    })
+                }
+          }
+        
+          if(inputSurname.value == ''){
+            errors.push({
+                    field: inputSurname.name,
+                    msg: "Campo Vacio!"
+                })
+          } else{
+                if(inputSurname.value.length < 2){
+                    errors.push({
+                        field: inputSurname.name,
+                        msg: "El campo debe tener al menos 2 caracteres"
+                    })
+                }
+          }
     })
 }
