@@ -20,7 +20,7 @@ const mainController = {
         })
     },
     login: (req, res) => {
-        return res.render('./users/login');
+        return res.render('./users/login', {errors:  ''});
     },
     save_login: (req, res) => {
         let email_form = req.body.email;
