@@ -33,6 +33,7 @@ app.use('/', mainRouter)
 app.use('/', usersRouter)
 app.use('/products', productsRouter)
 app.use('/api', apiUsersRouter)
+app.use('/api/products', apiProducts)
 
 app.listen(3000, () => {
   console.log("Success puerto 3000");
