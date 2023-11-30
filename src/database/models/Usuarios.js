@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         contrasenia: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         categoria: {
@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         imagen: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         fecha_creacion: {
