@@ -11,7 +11,7 @@ const uploadFile = require('../middlewares/userMulter');
 
 const usersController = {
   register: (req, res) => {
-    return res.render("./users/register", {errors: ''});
+    return res.render("./users/register", {errors: '', oldData:''});
   },
   save: (req, res, err) => {
     if (err) {
