@@ -1,5 +1,5 @@
 const db = require('../../database/models');
-const Product = require('../../database/models/productos');
+const Product = require('../../database/models/Products');
 const Op = db.Sequelize.Op;
 
 const productApiController = {
