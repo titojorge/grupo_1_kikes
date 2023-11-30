@@ -1,5 +1,5 @@
 const db = require('../../database/models');
-const Product = require('../../database/models/Products');
+const productos = require('../../database/models/Products');
 const Op = db.Sequelize.Op;
 
 const productApiController = {
@@ -9,8 +9,7 @@ const productApiController = {
             .then(products => {
                 const count = products.length; 
                 const countByCategory = {};
-                const data = [
-                ]
+                const data = []
                 products.forEach(product => {; 
                     const dataProduct = {
                         id: product.id,
@@ -36,7 +35,7 @@ const productApiController = {
             .findByPk(req.params.id)
             .then(productos => {
                 return res.json({
-                    data: {
+                    Producto: {
                         id: productos.id,
                         Nombre: productos.nombre,
                         Precio: productos.price,
