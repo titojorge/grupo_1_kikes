@@ -8,6 +8,7 @@ const usersRouter = require('./routes/users')
 const productsRouter = require('./routes/products');
 const apiUsersRouter = require('./routes/api/users');
 const apiProducts = require('./routes/api/products');
+const apiCategories = require('./routes/api/categories');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
 const cookierParser = require('cookie-parser');
@@ -34,6 +35,7 @@ app.use('/', mainRouter)
 app.use('/', usersRouter)
 app.use('/products', productsRouter)
 app.use('/api', apiUsersRouter)
+app.use('/api',apiCategories)
 app.use('/api', apiProducts)
 
 app.listen(3000, () => {
