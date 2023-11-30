@@ -17,7 +17,7 @@ const productApiController = {
                         nombre: product.nombre,
                         description: product.description,
                         categories: product.type_category,
-                        detail: `/api/products/${product.id}`
+                        detail: `localhost:3000/api/products/${product.id}`
                     }
                     data.push (dataProduct)
                 });
@@ -32,7 +32,7 @@ const productApiController = {
             });
     },
     show: (req, res) => {
-        db.Products
+        db.Product
             .findByPk(req.params.id)
             .then(productos => {
                 return res.json({
@@ -42,7 +42,7 @@ const productApiController = {
                         Precio: productos.price,
                         Descuento: productos.discount,
                         Categoria_De_Producto: productos.category_producto_id,
-                        Imagen: "localhost:3000" + productos.image,
+                        Imagen: "localhost:3000/images/productsImg/" + productos.image,
                         Tipo_categoria: productos.type_category,
                         Stock: productos.stock,
                         Fecha_creacion: productos.fecha_creacion,
