@@ -60,7 +60,7 @@ window.onload = function () {
                 msg: "Campo Vacio!"
             })
         } else {
-            if (inputConfirmarPassword.value.length != inputPassword.value) {
+            if (inputConfirmarPassword.value != inputPassword.value) {
                 errors.push({
                     field: inputConfirmarPassword.name,
                     msg: "Contraseña incorrecta"
