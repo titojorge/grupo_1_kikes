@@ -1,3 +1,28 @@
+RETROSPECTIVA SPRINT 8:
+
+- Comenzar a hacer:
+* Fomentar un mayor trabajo en equipo, promoviendo mas comunicación.
+* Conocernos personalmente.
+* Pulir los detalles pendientes.
+* Practicar para la presentación del proyecto.
+
+- Hacer más:
+* Modificar las validaciones.
+* Mejoras en el estilo CSS del sitio para una mejor experiencia de usuario.
+* Consultar a los profesores.
+
+- Continuar haciendo:
+* Cominicarse con el equipo.
+* Seguir programando reuniones.
+* Mejoras que veamos importantes.
+
+- Hacer menos:
+* No dejar morir el equipo.
+* No comunicar dificultades o impedimientos que surgan.
+
+- Dejar de hacer:
+* Procrastinar.
+
 RETROSPECTIVA SPRINT 7:
 
 - Comenzar a hacer:
