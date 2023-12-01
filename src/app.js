@@ -8,12 +8,15 @@ const usersRouter = require('./routes/users')
 const productsRouter = require('./routes/products');
 const apiUsersRouter = require('./routes/api/users');
 const apiProducts = require('./routes/api/products');
+const apiCategories = require('./routes/api/categories');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
 const cookierParser = require('cookie-parser');
 const upload = multer ({ dest: './public/images/perfiles'})//PRUEBA MULTER
+const cors = require('cors')
 
 /**------METODOS DE APLICACION GLOBAL------*/
+app.use(cors());
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false })); // Formularios sean procesados
 app.use(express.json());
@@ -34,7 +37,9 @@ app.use('/', mainRouter)
 app.use('/', usersRouter)
 app.use('/products', productsRouter)
 app.use('/api', apiUsersRouter)
+app.use('/api',apiCategories)
 app.use('/api', apiProducts)
+
 
 app.listen(3000, () => {
   console.log("Success puerto 3000");

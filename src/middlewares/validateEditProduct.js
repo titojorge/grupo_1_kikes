@@ -12,7 +12,7 @@ let validateEditProduct = [
     check('type_category')
         .notEmpty().withMessage('Debes completar el tipo de categoria del producto'),
     check('price')
-        .notEmpty().withMessage('Debe completar el stock')
+        .notEmpty().withMessage('Debe completar el campo de precio')
         .isFloat({ min: 0.00 }).withMessage('Debe ser un precio correcto y mayor a 0'),
     check('discount')
         .notEmpty().withMessage('Debe completar el descuento')
