@@ -1,7 +1,7 @@
 window.onload = function () {
 
-    let form = document.querySelector("#form_register");
-    //const ulError = document.querySelector(".text-danger");
+    let form = document.querySelector('#form_register');
+    const ulError = document.querySelector(".text-danger");
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -46,9 +46,9 @@ window.onload = function () {
                 msg: "Campo Vacio!"
             })
         } else {
-            if (inputSurname.value.length < 8) {
+            if (inputPassword.value.length < 8) {
                 errors.push({
-                    field: inputSurname.name,
+                    field: inputPassword.name,
                     msg: "El campo debe tener al menos 8 caracteres"
                 })
             }
@@ -56,13 +56,13 @@ window.onload = function () {
 
         if (inputConfirmarPassword.value == '') {
             errors.push({
-                field: inputConfirmarEmail.name,
+                field: inputConfirmarPassword.name,
                 msg: "Campo Vacio!"
             })
         } else {
-            if (inputSurname.value.length != inputPassword.value) {
+            if (inputConfirmarPassword.value != inputPassword.value) {
                 errors.push({
-                    field: inputSurname.name,
+                    field: inputConfirmarPassword.name,
                     msg: "Contraseña incorrecta"
                 })
             }

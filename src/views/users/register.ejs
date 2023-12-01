@@ -82,10 +82,16 @@
             </div>
             <div class="input-form">
                 <label for="imagen_perfil">Imagen de Perfil:</label>
-                <input type="file" name="imagen_perfil" />
+                <input type="file" name="imagen_perfil" id="imagen_perfil" />
                 <% if( errors.imagen_perfil ) { %>
                     <p class="text-danger"> <%= errors.imagen_perfil.msg %> </p>
                 <% } %>           
+            </div>
+
+            <div>
+                <ul class="text-danger">
+                    
+                </ul>
             </div>
 
             <div class="input-form">
