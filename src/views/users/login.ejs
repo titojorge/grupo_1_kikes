@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include('../partials/head') %>
+
+<head>
+    <%- include('../partials/head') %>
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/login.css">
         <link rel="stylesheet" href="/css/footer.css">
         <link rel="stylesheet" href="/css/products.css">
-    </head>
+</head>
+
 <body>
     <%- include('../partials/header')%>
-    
-    <section class="login-form">
-        <form action="/login" method="post">
-            <h3>INICIO DE SESION</h3>
 
-            <div class="input-form">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" >
-                <% if(errors.email) { %>
-                    <div class="text-danger"> 
-                      <%= errors.email.msg %>
-                    </div>
-                  <% } %>
-            </div>
+        <section class="login-form">
+            <form action="/login" method="post">
+                <h3>INICIO DE SESION</h3>
 
-            <div class="input-form">
-                <label for="contrasenia">Contraseña:</label>
-                <input type="password" id="contrasenia" name="contrasenia" >
-                <% if( errors.contrasenia) { %>
-                    <div class="text-danger"> 
-                    <%= errors.contrasenia.msg %>
-                    </div>
-                <% } %>
-            </div>
+                <div class="input-form">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email">
+                    <% if(errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                        <% } %>
+                </div>
 
-            <span class="forget">
-                <label for=""><input type="checkbox" name="checkbox">  Recordar mi sesion.</label>
-                <a class="forget-password" href="#">Olvidé mi contraseña.</a>
-            </span>
-            
-            <div class="input-form">
-                <input type="submit" value="Entrar">
-            </div>
-        </form>
-    </section>
-    <%- include('../partials/footer')%>
+                <div class="input-form">
+                    <label for="contrasenia">Contraseña:</label>
+                    <input type="password" id="contrasenia" name="contrasenia">
+                    <% if( errors.contrasenia) { %>
+                        <div class="text-danger">
+                            <%= errors.contrasenia.msg %>
+                        </div>
+                        <% } %>
+                </div>
+
+                <span class="forget">
+                    <label for=""><input type="checkbox" name="checkbox"> Recordar mi sesion.</label>
+                    <a class="forget-password" href="#">Olvidé mi contraseña.</a>
+                </span>
+
+                <div class="input-form">
+                    <input type="submit" value="Entrar">
+                </div>
+            </form>
+        </section>
+        <%- include('../partials/footer')%>
 </body>
+
 </html>

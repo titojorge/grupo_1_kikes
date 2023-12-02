@@ -26,6 +26,11 @@
                             </a>
                         </div>
                     <% }) %>
+                    <% if(products.length == 0) { %>
+                        <div class="text-danger"> 
+                            <h4>No se encontraron resultados.</h4>
+                        </div>
+                      <% } %>
                 </article>
             </div>
             <a class="comment-fixed" href="#">
