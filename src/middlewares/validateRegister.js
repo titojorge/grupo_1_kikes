@@ -24,13 +24,13 @@ let validateRegister = [
         .notEmpty().withMessage('Debes completar el tipo de categoria'),
     check('sexo')
         .notEmpty().withMessage('Debes completar el tipo de sexo'),
-    check('image_perfil')
+    check('imagen_perfil')
         .custom((value, {req}) => {
             let file = req.file
             let acceptedExtension = ['.jpg','.jpeg','.gif','.png']
             if(!file){
                 throw new Error('Tienes que subir una imagen')
-            } else{
+            } else {
                 let fileExtension = path.extname(file.originalname)
                 if(!acceptedExtension.includes(fileExtension)){
                     throw new Error(`Las extensiones de archivo permitidas son: ${acceptedExtension.join(', ')}`)
