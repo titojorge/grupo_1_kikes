@@ -34,7 +34,7 @@ const controller = {
 		  });
 	},
     productCart: (req, res) => {
-        return res.render('productCart');
+        return res.render('productCart',{ errors: '' });
     },
     new: (req, res) => {
 		db.CategoryProduct.findAll()
