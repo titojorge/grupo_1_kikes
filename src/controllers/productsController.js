@@ -15,6 +15,17 @@ const controller = {
                 res.render('./products/products', {products})
             })
 	},
+	search:(req,res)=>{
+		console.log(req.body.buscar)
+		db.Product.findAll({
+			where: {
+				nombre:{[Op.like]: '%'+req.body.buscar+'%'}
+			}
+		})
+            .then(products => {
+                res.render('./products/searchResult', {products})
+            })
+	},
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id)

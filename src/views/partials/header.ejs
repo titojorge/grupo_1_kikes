@@ -12,12 +12,12 @@
         <a href="#">Ofertas</a>
         <a href="#">Calzados</a>
         <a href="/users/">Todos Los Usuarios</a>
-        <div class="input-busqueda">
-            <input class="busqueda" type="search" placeholder="Buscar...">
-            <a class="search-bar" href="#">
+        <form class="input-busqueda" action="/products/searchResult" method="post">
+            <input class="busqueda" type="search" name="buscar" placeholder="Buscar...">
+            <button class="search-bar" type="submit">
                 <i class="fa fa-search"></i>
-            </a>
-        </div>
+            </button>
+        </form>
         <a href="productCart"><i class="fas fa-shopping-cart"></i></a>
     </section>
 </header>
