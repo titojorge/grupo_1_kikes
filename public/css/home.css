@@ -11,64 +11,14 @@
     width: 80vw;
     margin: auto;
 }
-.galeria_fotos_fila {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    border-radius: 20px;
-    margin: 10px 20px;
-}
 .galeria_fotos_fila p {
     margin: 0;
-}
-.galeria_fotos_fila .fotos_fila {
-    width: 2000%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    align-items: flex-start;
-    transition: all 0.3s linear;
-}
-.galeria_fotos_fila .box_imagen_galeria_fila img {
-    width: 100%;
-    aspect-ratio: 540 / 318;
-    object-fit: cover;
-    vertical-align: middle;
-}
-.galeria_fotos_fila .flechas_fila {
-    width: 5%;
-    max-width: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
-    z-index: 99;
-    filter: drop-shadow(0px 0px 2px black);
-    cursor: pointer;
-}
-.galeria_fotos_fila .flecha1_fila {
-    left: 30px;
-}
-.galeria_fotos_fila .flecha2_fila {
-    right: 30px;
 }
 .galeria_fotos_fila .flecha3_fila {
     right: 55%;
 }
 .galeria_fotos_fila #simbolo_play img {
     width: 100px;
-}
-.galeria_fotos_fila .flechas_fila img {
-    width: 100%;
-}
-.galeria_fotos_fila .contador_galeria_fila {
-    position: absolute;
-    z-index: 10;
-    top: 10px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 3px 5px;
-    font-size: 14px;
 }
 .productos_oferta h2{
     text-align: center;
