@@ -15,7 +15,7 @@ const productApiController = {
                         id: product.id,
                         nombre: product.nombre,
                         description: product.description,
-                        image: `localhost:3000/images/productsImg/${product.image}`,
+                        image: product.image,
                         price: product.price,
                         categories: product.type_category,
                         detail: `localhost:3000/api/products/${product.id}`

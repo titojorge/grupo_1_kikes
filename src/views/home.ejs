@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/galeria_fila.css">
     </head>
 <body>
     <%- include('./partials/header')%>
@@ -14,12 +15,16 @@
         <% } %>
     </section>
     <main>
-        <section class="img">
+        <section class="envoltura">
             <div class="galeria_fotos_fila">
                 <div class="fotos_fila">
-                    <div class="box_fila box_imagen_galeria_fila">
-                        <img src="/images/zapatillas.jpg" alt="">
-                    </div>
+                    <% products.forEach(function(elem) { %>
+                        <div class="box_fila box_imagen_galeria_fila">
+                            <a href="products/detail/<%= elem.id %>">
+                                <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
+                            </a>
+                        </div>
+                    <% }) %>
                 </div>
                 <div id="flecha_izq_fila " class="flechas_fila flecha1_fila ">
                     <img src="/images/flecha2.png " alt=" ">
@@ -30,9 +35,9 @@
                 <div class="contador_galeria_fila ">
                     <p>12/12</p>
                 </div>
-
             </div>
         </section>
+        <br><br>
         <section class="img">
             <div class="galeria_fotos_fila">
                 <div class="fotos_fila">
@@ -45,6 +50,7 @@
                 </div>
             </div>
         </section>
+        <br><br>
         <section class="productos_oferta">
             <h2>Productos en Oferta</h2>
             <article class="articulos_oferta">
@@ -77,4 +83,5 @@
     </a>
     <%- include('./partials/footer')%>
 </body>
+<script src="/js/galeria_fila.js"></script>
 </html>
