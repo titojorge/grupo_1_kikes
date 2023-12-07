@@ -17,11 +17,12 @@ p , a{
     font-family: 'Hind Siliguri', sans-serif;
     display: flex;
     margin: 0px 10px;
-    padding: 10px 20px;
+    padding: 0;
     justify-content: space-around;
     align-items: center;
     color:  rgba(255, 255, 255, 0.899);
     text-decoration: none;
+    width: 100%;
 }
 .encabezado-3{
     font-size: 13px;
@@ -47,16 +48,121 @@ p , a{
     text-decoration: none;
 }
 .busqueda{
+    border: solid thin transparent;
     color: aliceblue;
-    border: solid  var(--gl-color-grey-100);
+    /**border: solid  var(--gl-color-grey-100);*/
     padding: 0 35px 0 10px;
     background-color: var(--gl-color-grey-100);
     height: 32px;
     max-width: 230px;
 }
 .fa-search{
-    position: relative;
-    top: 2px;
-    right: 28px;
-    color: black;
+    border: solid thin transparent;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+#carrusel-caja {
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+    width: 200%;
+}
+
+#carrusel-contenido {
+    width: 60%;
+    align-self: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.textos{
+    font-family: 'Hind Siliguri', sans-serif;
+    color:  rgba(189, 189, 189, 0.899);
+    text-align: center;
+}
+
+.carrusel-elemento {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+@-moz-keyframes automatizacion {
+    0% {
+    margin-left: 0;
+    }
+
+    25% {
+        margin-left: 0;
+    }
+
+    50% {
+        margin-left: -50%;
+    }
+
+    75% {
+        margin-left: -50%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+        }
+    
+        25% {
+            margin-left: 0;
+        }
+    
+        50% {
+            margin-left: -50%;
+        }
+    
+        75% {
+            margin-left: -50%;
+        }
+    
+        100% {
+            margin-left: 0;
+        }
+}
+
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+        }
+    
+        25% {
+            margin-left: 0;
+        }
+    
+        50% {
+            margin-left: -100%;
+        }
+    
+        75% {
+            margin-left: -100%;
+        }
+    
+        100% {
+            margin-left: 0;
+        }
 }

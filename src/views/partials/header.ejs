@@ -1,23 +1,30 @@
 <header class="encabezado">
-    <section class="encabezado-3">
-        
-        <a class="ingresa" href="/login">Ingresar</a>
-        <a class="crea" href="/register">Crear tu cuenta</a>
-        <a class="ingresa cerrar-sesion" href="/cerrar-sesion">Cerrar sesion</a>
-    </section>
-    <section class="encabezado-2">
-        <a href="/home"><img src="/images/kike-logo.png" width="150px"></a>
-        <a href="/products/list">Todos los productos</a>
-        <a href="/products/new">Nuevo</a>
-        <a href="#">Ofertas</a>
-        <a href="#">Calzados</a>
-        <a href="/users/">Todos Los Usuarios</a>
-        <form class="input-busqueda" action="/products/searchResult" method="post">
-            <input class="busqueda" type="search" name="buscar" placeholder="Buscar...">
-            <button class="search-bar" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </form>
-        <a href="productCart"><i class="fas fa-shopping-cart"></i></a>
-    </section>
+  <section class="encabezado-3">
+    <div id="carrusel-contenido">
+        <div id="carrusel-caja">
+            <div class="carrusel-elemento">
+                <span class="textos">3 Cuotas sin Interés en compras superiores a $10.000 con VISA y MASTERCARD</span>
+            </div>
+            <div class="carrusel-elemento">   
+                <span class="textos">Envío Gratis en compras superiores a $10.000</span>
+            </div>
+        </div>
+    </div>
+    <a class="ingresa" href="/login">Ingresar</a>
+    <a class="crea" href="/register">Crear tu cuenta</a>
+    <a class="ingresa cerrar-sesion" href="/cerrar-sesion">Cerrar sesion</a>
+  </section>
+  <section class="encabezado-2">
+    <a href="/home"><img src="/images/kike-logo.png" width="150px"></a>
+    <a href="/products/list">Todos los productos</a>
+    <a href="/products/new">Nuevo</a>
+    <a href="#">Ofertas</a>
+    <a href="#">Calzados</a>
+    <a href="/users/">Todos Los Usuarios</a>
+    <form class="input-busqueda" action="/products/searchResult" method="post">
+      <input class="busqueda" type="search" name="buscar" placeholder="Buscar...">
+      <button class="fa fa-search" type="submit"></button>
+    </form>
+    <a href="productCart"><i class="fas fa-shopping-cart"></i></a>
+  </section>
 </header>
