@@ -6,46 +6,44 @@
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/login.css">
         <link rel="stylesheet" href="/css/footer.css">
-        <link rel="stylesheet" href="/css/products.css">
 </head>
 
 <body>
     <%- include('../partials/header')%>
 
-        <section class="login-form">
-            <form action="/login" method="post">
-                <h3>INICIO DE SESION</h3>
+        <div class="body">
+            <section class="login-form">
 
-                <div class="input-form">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email">
+                <h1>INICIO DE SESIÓN</h1>
+    
+                <form action="/login" method="post">
+                    <div class="input-form">
+                        <input type="email" id="email" name="email" placeholder=" ">
+                        <label for="email">Correo Electrónico</label>
+                    </div>
                     <% if(errors.email) { %>
                         <div class="text-danger">
                             <%= errors.email.msg %>
                         </div>
                         <% } %>
-                </div>
-
-                <div class="input-form">
-                    <label for="contrasenia">Contraseña:</label>
-                    <input type="password" id="contrasenia" name="contrasenia">
+                    <div class="input-form">
+                        <input type="password" id="contrasenia" name="contrasenia" placeholder=" ">
+                        <label for="contrasenia">Contraseña</label>
+                    </div>
                     <% if( errors.contrasenia) { %>
                         <div class="text-danger">
                             <%= errors.contrasenia.msg %>
                         </div>
                         <% } %>
-                </div>
-
-                <span class="forget">
-                    <label for=""><input type="checkbox" name="checkbox"> Recordar mi sesion.</label>
-                    <a class="forget-password" href="#">Olvidé mi contraseña.</a>
-                </span>
-
-                <div class="input-form">
+                    <div class="recordar">Olvidé mi contraseña</div>
                     <input type="submit" value="Entrar">
-                </div>
-            </form>
-        </section>
+                    <div class="registrarse">
+                        <label for=""><input type="checkbox" name="checkbox"> Recordar mi sesión.</label>
+                    </div>
+                </form>
+                
+            </section>
+        </div>
         <%- include('../partials/footer')%>
 </body>
 
