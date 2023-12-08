@@ -28,7 +28,7 @@ const mainController = {
         let email_form = req.body.email;
         let pass_form = req.body.contrasenia;
         let promesaProductos = db.Product.findAll()
-        let promesaUsuario = db.Usuario.findAll({
+        let promesaUsuario = db.Usuario.findOne({
             where: { email : email_form}
         })
         Promise.all([promesaProductos, promesaUsuario])
@@ -39,16 +39,15 @@ const mainController = {
                 console.log(errores);
                 return res.render('./users/login', { errors: errores, oldData: req.body })
             }else{
-                if (user_found && user_found.length > 0) {
-                    const check = bcrypt.compareSync(pass_form, user_found[0].contrasenia);
+                if (user_found) {
+                    const check = bcrypt.compareSync(pass_form, user_found.contrasenia);
                     if (check) {
-                        req.session.id_usuario = user_found[0].id;
-                        req.session.nombre = user_found[0].nombre;
-                        req.session.apellido = user_found[0].apellido;
-                        res.cookie('id', user_found[0].id);
-                        res.cookie('nameUser', user_found[0].nombre);
-                        res.render('home', { products: products, userFound: user_found })
+                        req.session.userLogged = user_found;
+                        if(req.body.remember_user) {
+                            res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 10 })
+                        }
                         console.log('exito');
+                        return res.redirect('/')
                     } else {
                         res.render('./users/login',{errors: {contrasenia:{msg:'Contraseña Incorrecta123'}}})
                         console.log('fracaso');
@@ -61,8 +60,10 @@ const mainController = {
         
     },
     cerrar: (req, res) => {
-        if (req.session.id_usuario) {
-            req.session.destroy();
+        if (req.session.userLogged) {
+            res.clearCookie('userEmail');
+		    req.session.destroy();
+            res.locals.isLogged = false;
             return res.redirect('/login')
         }
     }
