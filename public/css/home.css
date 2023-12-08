@@ -2,6 +2,13 @@ body{
     font-family: Helvetica, sans-serif;
     background-color: #d1d3aa;
 }
+.gif{
+    background-image: url(/video/argentina.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat ;
+}
+
 .comment-fixed{
     position: fixed;
     right: 30px;
