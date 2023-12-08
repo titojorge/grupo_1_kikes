@@ -2,10 +2,6 @@
 <html lang="en">
     <head>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/galeria_fila.css">
     </head>
 <body>
     <%- include('./partials/header')%>
@@ -48,22 +44,24 @@
         <br><br>
         <section class="productos_oferta">
             <h2>Productos en Oferta</h2>
-            <article class="articulos_oferta">
-                <% products.forEach(function(elem) { %>
-                    <% if (elem.type_category == 'in-sale') { %>
-                    <div class="articulo_oferta">
-                        <a href="products/detail/<%= elem.id %>">
-                            <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
-                            <p><b>Descripcion</b></p>
-                            <p><%= elem.description %></p>
-                            <p><b>Precio:</b> $ <%= elem.price %></p>
-                            <p><b>Descuento:</b> $ <%= elem.discount %></p>
-                            <p class="product"><b><%= elem.name %></b></p>
-                        </a>
-                    </div>
-                    <% } %>
-                <% }) %>
-            </article>
+            <div class="contenedor_articulos">
+                <article class="articulos_oferta">
+                    <% products.forEach(function(elem) { %>
+                        <% if (elem.type_category == 'in-sale') { %>
+                        <div class="articulo_oferta">
+                            <a href="products/detail/<%= elem.id %>">
+                                <p><b><%= elem.nombre %></b></p>
+                                <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
+                                <!-- <p><b>Descripcion</b></p>
+                                <p><%= elem.description %></p> -->
+                                <p><b>Precio:</b> $ <%= elem.price %></p>
+                                <p><b>Descuento:</b> $ <%= elem.discount %></p>
+                            </a>
+                        </div>
+                        <% } %>
+                    <% }) %>
+                </article>
+            </div>
         </section>
         <section class="suscripcion">
             <h2>¡Suscribete dejando tu email!</h2>

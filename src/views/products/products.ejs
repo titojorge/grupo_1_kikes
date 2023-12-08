@@ -2,27 +2,25 @@
 <html lang="en">
     <head>
         <%- include('../partials/head') %>
-        <link rel="stylesheet" href="/css/header.css">
-        <link rel="stylesheet" href="/css/home.css">
-        <link rel="stylesheet" href="/css/footer.css">
     </head>
 <body>
     <%- include('../partials/header')%>
     
     <main>
+        <br>
         <section class="productos_oferta">
             <h2>Todos los productos</h2>
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="contenedor_articulos">
                 <article class="articulos_oferta">
                     <% products.forEach(function(elem) { %>
                         <div class="articulo_oferta">
                             <a href="./detail/<%= elem.id %>">
+                                <p><b><%= elem.nombre %></b></p>
                                 <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
-                                <p><b>Descripcion</b></p>
-                                <p><%= elem.description %></p>
+                                <!-- <p><b>Descripcion</b></p>
+                                <p><%= elem.description %></p> -->
                                 <p><b>Precio:</b> $ <%= elem.price %></p>
                                 <p><b>Descuento:</b> % <%= elem.discount %></p>
-                                <p class="product"><b><%= elem.name %></b></p>
                             </a>
                         </div>
                     <% }) %>

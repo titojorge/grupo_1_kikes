@@ -1,3 +1,7 @@
+body{
+    font-family: Helvetica, sans-serif;
+    background-color: #d1d3aa;
+}
 .comment-fixed{
     position: fixed;
     right: 30px;
@@ -23,40 +27,58 @@
 .productos_oferta h2{
     text-align: center;
 }
-.articulos_oferta{
+
+.contenedor_articulos .articulos_oferta{
     display: flex;
+    min-height: 100vh;
+}
+.articulos_oferta{
+    text-align: center;
     justify-content: space-around;
+    display: flex;
+    align-items: center;
+    min-height: 150vh;
+    flex-wrap: wrap;
 }
 .articulo_oferta{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 60vh;
     box-shadow: 5px 5px 10px rgb(78, 78, 78);
 }
 .articulo_oferta p{
     text-align: justify;
+    width: 200px;
     padding:5px 15px;
     color: rgb(0, 0, 0);
 }
 .imagen_oferta{
-    width: 100px;
-    margin:auto;
+    width: 150px;
+    margin:5px;
+    aspect-ratio: 150/150;
 }
 .suscripcion{
     background-color: rgb(30, 0, 255);
-    width: 60%;
+    width: 75%;
     margin: 25px auto;
     padding: 20px 30px;
     text-align: center;
+    border-radius: 20px;
 }
 .suscripcion input{
     display: block;
+    width: 60%;
+    text-align: center;
     margin: 10px auto;
-    padding: 10px auto;
+    padding: 10px 10px;
+    border-radius: 10px;
 }
 .suscripcion button{
     display: block;
+    width: 150px;
     margin: 10px auto;
-    padding: 10px auto;
+    padding: 10px 10px;
+    border-radius: 10px;
 }
