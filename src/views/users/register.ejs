@@ -14,46 +14,58 @@
                 <h1>REGISTRO</h1>
                 <form action="/register" method="POST" id="form_register" enctype="multipart/form-data">
                     <div class="input-form">
-                        <input type="text" id="nombre" name="nombre" placeholder=" ">
+                        <input type="text" id="nombre" name="nombre" placeholder=" " value="<%= oldData.name %>">
                         <label for="nombre">Nombre</label>
                     </div>
                     <% if( errors.nombre ) { %>
-                        <p class="text-danger"> <%= errors.nombre.msg %> </p>
+                        <div class="text-danger">
+                            <%= errors.nombre.msg %>
+                        </div>
                     <% } %>
                     <div class="input-form">
-                        <input type="text" id="apellido" name="apellido" placeholder=" ">
+                        <input type="text" id="apellido" name="apellido" placeholder=" " value="<%= oldData.name %>">
                         <label for="apellido">Apellido</label>
                     </div>
                     <% if( errors.apellido ) { %>
-                        <p class="text-danger"> <%= errors.apellido.msg %> </p>
+                        <div class="text-danger">
+                            <%= errors.apellido.msg %>
+                        </div>
                     <% } %>
                     <div class="input-form">
-                        <input type="email" id="email" name="email" placeholder=" ">
+                        <input type="email" id="email" name="email" placeholder=" " value="<%= oldData.name %>">
                         <label for="email">Correo Electrónico</label>
                     </div>
                     <% if( errors.email ) { %>
-                        <p class="text-danger"> <%= errors.email.msg %> </p>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
                     <% } %>
                     <div class="input-form">
                         <input type="email" id="confirmar_email" name="confirmar_email" placeholder=" ">
                         <label for="confirmar_email">Confirmar Correo Electrónico</label>
                     </div>
                     <% if( errors.confirmar_email ) { %>
-                        <p class="text-danger"> <%= errors.confirmar_email.msg %> </p>
+                        <div class="text-danger">
+                            <%= errors.confirmar_email.msg %>
+                        </div>
                     <% } %>
                     <div class="input-form">
                         <input type="password" id="contrasenia" name="contrasenia" placeholder=" ">
                         <label for="contrasenia">Contraseña</label>
                     </div>
                     <% if( errors.contrasenia ) { %>
-                        <p class="text-danger"> <%= errors.contrasenia.msg %> </p>
+                        <div class="text-danger">
+                            <%= errors.contrasenia.msg %>
+                        </div>
                     <% } %>
                     <div class="input-form">
                         <input type="password" id="confirmar_contrasenia" name="confirmar_contrasenia" placeholder=" ">
                         <label for="confirmar_contrasenia">Confirmar Contraseña</label>
                     </div>
                     <% if( errors.confirmar_contrasenia ) { %>
-                        <p class="text-danger"> <%= errors.confirmar_contrasenia.msg %> </p>
+                        <div class="text-danger">
+                            <%= errors.confirmar_contrasenia.msg %>
+                        </div>
                     <% } %>
                     <div class="input-form">
                         <label class="label-select" for="categoria">Categoria</label>
@@ -80,7 +92,9 @@
                         <input type="file" name="imagen_perfil" id="imagen_perfil" />         
                     </div>
                     <% if( errors.imagen_perfil ) { %>
-                        <p class="text-danger"> <%= errors.imagen_perfil.msg %> </p>
+                        <div class="text-danger">
+                            <%= errors.imagen_perfil.msg %>
+                        </div>
                     <% } %>
         
                     <div>
