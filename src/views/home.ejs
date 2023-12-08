@@ -2,14 +2,11 @@
 <html lang="en">
     <head>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/galeria_fila.css">
     </head>
 <body>
     <%- include('./partials/header')%>
     <main>
+        <div class="gif">
         <section class="envoltura">
             <div class="galeria_fotos_fila">
                 <div class="fotos_fila">
@@ -37,41 +34,41 @@
             <div class="galeria_fotos_fila">
                 <div class="fotos_fila">
                     <div class="box_fila box_imagen_galeria_fila">
-                        <img src="/images/zapatillas.jpg" alt="">
+                        <video width="640" height="360" controls>
+                            <source src="/video/kikes.mp4" type="video/mp4">
+                        </video>
                     </div>
-                </div>
-                <div id="simbolo_play" class="flechas_fila flecha3_fila ">
-                    <img src="/images/simbolo_play.png " alt=" ">
                 </div>
             </div>
         </section>
         <br><br>
         <section class="productos_oferta">
             <h2>Productos en Oferta</h2>
-            <article class="articulos_oferta">
-                <% products.forEach(function(elem) { %>
-                    <% if (elem.type_category == 'in-sale') { %>
-                    <div class="articulo_oferta">
-                        <a href="products/detail/<%= elem.id %>">
-                            <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
-                            <p><b>Descripcion</b></p>
-                            <p><%= elem.description %></p>
-                            <p><b>Precio:</b> $ <%= elem.price %></p>
-                            <p><b>Descuento:</b> $ <%= elem.discount %></p>
-                            <p class="product"><b><%= elem.name %></b></p>
-                        </a>
-                    </div>
-                    <% } %>
-                <% }) %>
-            </article>
+            <div class="contenedor_articulos">
+                <article class="articulos_oferta">
+                    <% products.forEach(function(elem) { %>
+                        <% if (elem.type_category == 'in-sale') { %>
+                        <div class="articulo_oferta">
+                            <a href="products/detail/<%= elem.id %>">
+                                <p><b><%= elem.nombre %></b></p>
+                                <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
+                                <!-- <p><b>Descripcion</b></p>
+                                <p><%= elem.description %></p> -->
+                                <p><b>Precio:</b> $ <%= elem.price %></p>
+                                <p><b>Descuento:</b> $ <%= elem.discount %></p>
+                            </a>
+                        </div>
+                        <% } %>
+                    <% }) %>
+                </article>
+            </div>
         </section>
         <section class="suscripcion">
             <h2>¡Suscribete dejando tu email!</h2>
             <input type="email" placeholder="ejemplo@ejemplo.com">
             <button type="submit">Suscribirse</button>
         </section>
-    
-
+        </div>
     </main>
     <a class="comment-fixed" href="#">
         <i class="far fa-comments fa-spin"></i>

@@ -3,16 +3,16 @@
 
 <head>
   <%- include('../partials/head') %>
-  <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/new.css">
-  <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/css/products.css">
+  <link rel="stylesheet" href="/css/new_product_form.css">
 </head>
 
 <body>
   <%- include('../partials/header')%>
 
-  <section class="new-form">
+  <section class="new-form body">
+    <section class="login-form">
     <h1>Nuevo Producto</h1>
     <form action="/products/new" method="POST" id="form_product" enctype="multipart/form-data">
       <div class="input-form">
@@ -112,6 +112,7 @@
         <button type="submit">Guardar</button>
       </div>
     </form>
+  </section>
   </section>
   <%- include('../partials/footer')%>
   <script src="/js/validateCreateProductF.js"></script>
