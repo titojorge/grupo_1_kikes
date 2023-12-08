@@ -14,6 +14,7 @@ const session = require('express-session');
 const cookierParser = require('cookie-parser');
 const upload = multer ({ dest: './public/images/perfiles'})//PRUEBA MULTER
 const cors = require('cors')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 /**------METODOS DE APLICACION GLOBAL------*/
 app.use(cors());
@@ -26,6 +27,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+app.use(userLoggedMiddleware);
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 /**------METODOS DE INSTANCIA EJS------*/
