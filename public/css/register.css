@@ -1,44 +1,127 @@
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 150vh;
+}
+
 .registration-form {
-    background-color: (255,0,0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.registration-form h1 {
     text-align: center;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    margin: 20px 0;
 }
-.registration-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
+
+.registration-form form {
+    padding: 0 40px;
+    box-sizing: border-box;
 }
-.input-form {
-    display: block;
-    margin: auto;
-    margin-bottom: 15px;
-    width: 40%;
+
+form .input-form {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
 }
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"]{
-    padding: 8px;
+
+.input-form input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
     font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.input-form label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-form .label-select {
+    position: relative;
+    display: flex;
+}
+
+.input-form span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #344e83;
+}
+
+.input-form input:focus ~ label,
+.input-form input:not(:placeholder-shown) ~ label {
+    top: -5px;
+    color: #344e83;
+}
+
+.input-form input:focus ~ span::before,
+.input-form input:focus ~ span::before {
     width: 100%;
 }
-.fecha-inputs {
-    display: flex;
-    gap: 5px;
+
+.recordar {
+    margin: -5px 0 20px 5px;
+    color: #344e83;
+    cursor: pointer;
 }
+
+.recordar:hover {
+    text-decoration: underline;
+}
+
 input[type="submit"] {
     width: 100%;
-    padding: 10px;
+    height: 50px;
+    border: 1px solid;
+    background: #344e83;
+    border-radius: 25px;
     font-size: 18px;
-    background-color: #1259c3;
     color: #fff;
-    border: none;
     cursor: pointer;
-    transition: all 450ms;
+    outline: none;
 }
-input[type="submit"]:hover {
-    background-color: #0022AA;
+
+input[type="submit"] {
+    border-color: #344e83;
+    transition: .5s;
+}
+
+.registrarse {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+}
+
+.registrarse a {
+    color: blue;
+    text-decoration: none;
+}
+
+.registrarse a:hover {
+    text-decoration: underline;
 }
 
 .text-danger{
