@@ -1,0 +1,39 @@
+.productos_oferta h2{
+    font-family: 'Hind Siliguri', sans-serif;
+    width:100%;
+    top:70px;
+    text-align: center;
+}
+.text-danger h4{
+    font-family: 'Hind Siliguri', sans-serif;
+    width:100%;
+    top: 100px;
+    text-align: center;
+}
+.contenedor_articulos .articulos_oferta{
+    display: flex;
+    min-height: 100vh;
+}
+.articulos_oferta{
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    min-height: 150vh;
+    flex-wrap: wrap;
+}
+.articulo_oferta{
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    box-shadow: 5px 5px 10px rgb(78, 78, 78);
+}
+.articulo_oferta p{
+    text-align: justify;
+    width: 200px;
+    padding:5px 15px;
+    color: rgb(0, 0, 0);
+}

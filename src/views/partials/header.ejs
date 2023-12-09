@@ -11,10 +11,10 @@
             </div>
         </div>
         <% if (locals.isLogged) { %>
-        <div class="text-center">
+        <div class="icon-user">
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span>Bienvenido <%= locals.userLogged.nombre %></span>
+                <span class="text-welcome">Bienvenido <%= locals.userLogged.nombre %></span>
                 <% if (locals.userLogged.imagen) { %>
                     <img src="<%= locals.userLogged.imagen %>" width="40" style="border-radius: 100%;">
                 <% } else { %>
@@ -24,8 +24,10 @@
                 <% } %>
               </button>
               <ul class="dropdown-menu" style="display:none">
-                <li><a class="dropdown-item" href="/detailUser/<%= locals.userLogged.id %>">Ver Perfil</a></li>
-                <li><a class="dropdown-item ingresa cerrar-sesion" href="/cerrar-sesion">Cerrar Sesion</a></li>
+                <li>
+                    <a class="dropdown-item" href="/detailUser/<%= locals.userLogged.id %>">Ver perfil</a>
+                    <a class="dropdown-item cerrar-sesion" href="/cerrar-sesion">Cerrar sesion</a>
+                </li>
               </ul>
             </div>
         </div>

@@ -10,6 +10,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
+    height: 600px;
     border-radius: 10px;
     border: 1px solid #000;
     background-color: #fff;
@@ -101,7 +102,7 @@ input[type="submit"] {
     outline: none;
 }
 
-input[type="submit"] {
+.input-submit{
     border-color: #344e83;
     transition: .5s;
 }

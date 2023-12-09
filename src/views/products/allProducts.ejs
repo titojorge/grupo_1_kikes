@@ -1,0 +1,20 @@
+<div class="contenedor_articulos">
+    <article class="articulos_oferta">
+        <% products.forEach(function(elem) { %>
+            <div class="articulo_oferta">
+                <a href="./detail/<%= elem.id %>">
+                    <p><b>
+                            <%= elem.nombre %>
+                        </b></p>
+                    <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
+                    <!-- <p><b>Descripcion</b></p>
+            <p><%= elem.description %></p> -->
+                    <p><b>Precio:</b> $ <%= elem.price %>
+                    </p>
+                    <p><b>Descuento:</b> % <%= elem.discount %>
+                    </p>
+                </a>
+            </div>
+            <% }) %>
+    </article>
+</div>

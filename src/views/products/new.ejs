@@ -1,121 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <%- include('../partials/head') %>
-  <link rel="stylesheet" href="/css/new.css">
-  <link rel="stylesheet" href="/css/products.css">
-  <link rel="stylesheet" href="/css/new_product_form.css">
+    <link rel="stylesheet" href="/css/header"
+    <link rel="stylesheet" href="/css/new.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/new_product_form.css">
+    <link rel="stylesheet" href="/css/footer">
 </head>
-
 <body>
   <%- include('../partials/header')%>
-
-  <section class="new-form body">
-    <section class="login-form">
-    <h1>Nuevo Producto</h1>
-    <form action="/products/new" method="POST" id="form_product" enctype="multipart/form-data">
-      <div class="input-form">
-        <label for="name">Nombre del producto:</label>
-        <input type="text" name="name" id="name" value="<%= oldData.name %>"><br>
-        <% if( errors.name) { %>
-          <div class="text-danger"> 
-            <%= errors.name.msg %>
+    <section class="new-form body">
+      <section class="login-form">
+        <h1>Nuevo Producto</h1>
+        <form action="/products/new" method="POST" id="form_product" enctype="multipart/form-data">
+          <div class="input-form">
+            <label for="name">Nombre del producto:</label>
+            <input type="text" name="name" id="name" value="<%= oldData.name %>"><br>
+            <% if( errors.name) { %>
+              <div class="text-danger">
+                <%= errors.name.msg %>
+              </div>
+              <% } %>
           </div>
-        <% } %>
-      </div>
-      <div class="input-form">
-        <label for="description">Descripción:</label>
-        <textarea name="description" id="description"><%= oldData.description %></textarea><br>
-        <% if(errors.description) { %>
-          <div class="text-danger"> 
-            <%= errors.description.msg %>
+          <div class="input-form">
+            <label for="description">Descripción:</label>
+            <textarea name="description" id="description"><%= oldData.description %></textarea><br>
+            <% if(errors.description) { %>
+              <div class="text-danger">
+                <%= errors.description.msg %>
+              </div>
+              <% } %>
           </div>
-        <% } %>
-      </div>
-      <div class="input-form">
-        <label for="image_product">Imagen:</label>
-        <input type="file" name="image_product" id="image_product" value="<%= oldData.image_product %>"><br>
-        <% if(errors.image_product) { %>
-          <div class="text-danger"> 
-            <%= errors.image_product.msg %>
+          <div class="input-form">
+            <label for="image_product">Imagen:</label>
+            <input type="file" name="image_product" id="image_product" value="<%= oldData.image_product %>"><br>
+            <% if(errors.image_product) { %>
+              <div class="text-danger">
+                <%= errors.image_product.msg %>
+              </div>
+              <% } %>
           </div>
-        <% } %>
-      </div>
-      <div class="input-form">
-        <label for="category_producto_id">Categoría de producto:</label>
-        <select name="category_producto_id" id="category_producto_id">
-            <% for( let i = 0; i < categorias.length; i++ ) { %>
-                <% if(oldData.category_producto_id == categorias[i].id) { %>
-                  <option value="<%= categorias[i].id %>" selected><%= categorias[i].id %> - <%=categorias[i].nombre %> </option>  
+          <div class="input-form">
+            <label for="category_producto_id">Categoría de producto:</label>
+            <select name="category_producto_id" id="category_producto_id">
+              <% for( let i=0; i < categorias.length; i++ ) { %>
+                <% if(oldData.category_producto_id==categorias[i].id) { %>
+                  <option value="<%= categorias[i].id %>" selected>
+                    <%= categorias[i].id %> - <%=categorias[i].nombre %>
+                  </option>
+                  <% }else{ %>
+                    <option value="<%= categorias[i].id %>">
+                      <%= categorias[i].id %> - <%=categorias[i].nombre %>
+                    </option>
+                    <% } %>
+                      <% } %>
+            </select>
+            <% if(errors.category_producto_id) { %>
+              <div class="text-danger">
+                <%= errors.category_producto_id.msg %>
+              </div>
+              <% } %>
+          </div>
+          <div class="input-form">
+            <label for="stock">Stock:</label>
+            <input type="number" name="stock" id="stock" step="1" value="<%= oldData.stock %>"><br>
+            <% if(errors.stock) { %>
+              <div class="text-danger">
+                <%= errors.stock.msg %>
+              </div>
+              <% } %>
+          </div>
+          <div class="input-form">
+            <label for="type_category">Tipo de Categoría:</label>
+            <select name="type_category" id="type_category">
+              <% if(oldData.type_category=='in-sale' ) { %>
+                <option value="in-sale" selected>En Oferta</option>
+                <option value="visited">Visitado</option>
                 <% }else{ %>
-                  <option value="<%= categorias[i].id %>"><%= categorias[i].id %> - <%=categorias[i].nombre %> </option>
-                <% } %>  
-            <% } %>
-        </select>
-        <% if(errors.category_producto_id) { %>
-          <div class="text-danger"> 
-            <%= errors.category_producto_id.msg %>
+                  <option value="in-sale">En Oferta</option>
+                  <option value="visited" selected>Visitado</option>
+                  <% } %>
+            </select><br>
+            <% if(errors.type_category) { %>
+              <div class="text-danger">
+                <%= errors.type_category.msg %>
+              </div>
+              <% } %>
           </div>
-        <% } %>
-      </div>
-      <div class="input-form">
-        <label for="stock">Stock:</label>
-        <input type="number" name="stock" id="stock" step="1" value="<%= oldData.stock %>"><br>
-        <% if(errors.stock) { %>
-          <div class="text-danger"> 
-            <%= errors.stock.msg %>
+          <div class="input-form">
+            <label for="price">Precio:</label>
+            <input type="number" name="price" id="price" step="0.01" value="<%= oldData.price %>"><br>
+            <% if(errors.price) { %>
+              <div class="text-danger">
+                <%= errors.price.msg %>
+              </div>
+              <% } %>
           </div>
-        <% } %>
-      </div>
-      <div class="input-form">
-        <label for="type_category">Tipo de Categoría:</label>
-        <select name="type_category" id="type_category">
-            <% if(oldData.type_category == 'in-sale') { %>
-              <option value="in-sale" selected>En Oferta</option> 
-              <option value="visited">Visitado</option> 
-            <% }else{ %>
-              <option value="in-sale">En Oferta</option>
-              <option value="visited" selected>Visitado</option>
-            <% } %>  
-        </select><br>
-        <% if(errors.type_category) { %>
-          <div class="text-danger"> 
-            <%= errors.type_category.msg %>
+          <div class="input-form">
+            <label for="discount">Descuento:</label>
+            <input type="number" name="discount" id="discount" step="1" value="<%= oldData.discount %>"><br>
+            <% if(errors.discount) { %>
+              <div class="text-danger">
+                <%= errors.discount.msg %>
+              </div>
+              <% } %>
           </div>
-        <% } %>
-      </div>
-      <div class="input-form">
-        <label for="price">Precio:</label>
-        <input type="number" name="price" id="price" step="0.01" value="<%= oldData.price %>"><br>
-        <% if(errors.price) { %>
-          <div class="text-danger"> 
-            <%= errors.price.msg %>
+          <div class="input-submit-form">
+            <button class="input-submit" type="submit">Guardar</button>
           </div>
-        <% } %>
-      </div>
-      <div class="input-form">
-        <label for="discount">Descuento:</label>
-        <input type="number" name="discount" id="discount" step="1" value="<%= oldData.discount %>"><br>
-        <% if(errors.discount) { %>
-          <div class="text-danger"> 
-            <%= errors.discount.msg %>
-          </div>
-        <% } %>
-      </div>
-      <div>
-        <ul class="text-danger">
-            
-        </ul>
-      </div>
-      <div class="input-form">
-        <button type="submit">Guardar</button>
-      </div>
-    </form>
-  </section>
-  </section>
-  <%- include('../partials/footer')%>
-  <script src="/js/validateCreateProductF.js"></script>
+        </form>
+      </section>
+    </section>
+    <%- include('../partials/footer')%>
+      <script src="/js/validateCreateProductF.js"></script>
 </body>
-
 </html>

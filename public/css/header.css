@@ -66,12 +66,12 @@ a {
 .fa-search {
     border: solid thin transparent;
     cursor: pointer;
-    position: absolute;
     z-index: 10;
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
     background-color: transparent;
@@ -175,20 +175,20 @@ a {
 }
 
 .btn-default {
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
-}
+    margin: 0px 10px;
+    background-color: rgba(0, 0, 0, 0.899);
+    padding: 10px 15px;
+    color: rgba(255, 255, 255, 0.899);
+    text-decoration: none;}
 
 .btn.focus {
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
-
-.dropdown {
-    position: relative;
+.text-welcome{
+    font-family: 'Hind Siliguri', sans-serif;
+    text-align: center;
 }
-
 .dropdown-toggle:focus {
     outline: 0;
 }
@@ -216,6 +216,7 @@ a {
 }
 
 .dropdown-item {
+    font-family: 'Hind Siliguri', sans-serif;
     display: block;
     width: 100%;
     padding: .25rem 1rem;
