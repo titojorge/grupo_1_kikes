@@ -32,6 +32,9 @@ body{
     width: 100px;
 }
 .productos_oferta h2{
+    font-family: 'Hind Siliguri', sans-serif;
+    width:100%;
+    top:70px;
     text-align: center;
 }
 
@@ -48,6 +51,7 @@ body{
     flex-wrap: wrap;
 }
 .articulo_oferta{
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
