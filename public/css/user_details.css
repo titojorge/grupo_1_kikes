@@ -24,6 +24,12 @@ img.image_user{
     border-radius: 5px;
     transition: .3s;
 }
+.contact a.edit {
+    background: #fca500;
+}
+.contact a.delete {
+    background: red;
+}
 
 .contact a:hover {
     
