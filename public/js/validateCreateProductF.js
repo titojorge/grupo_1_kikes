@@ -34,7 +34,7 @@ window.onload = function () {
                 msg: "El campo debe tener al menos 20 caracteres"
             })
       }
-      let tipo = inputImageProduct.files[0].type
+      let tipo = inputImageProduct.files[0] ? inputImageProduct.files[0].type : null
       if(!(tipo == 'image/jpeg' || tipo == 'image/png' || tipo == 'image/gif')){
         errors.push({
                 field: inputImageProduct.name,

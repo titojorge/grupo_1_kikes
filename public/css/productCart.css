@@ -1,15 +1,23 @@
-main{
+.main{
     display: flex;
     flex-direction: row-reverse;
     margin-top: 5px;
 }
+.giff {
+    background-image: url(/video/argentina.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat ;
+}
 .resumen{
+    position: absolute;
+    right: -1%;
     width: 35%;
     text-align: center;
     margin: 10px;
 }
 .resumen h2{
-    margin-top: -5px;
+    margin-top: -10px;
 }
 .monto{
     display: flex;
