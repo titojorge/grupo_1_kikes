@@ -11,78 +11,80 @@
 <body>
     <%- include('../partials/header')%>
     <div class="gif">
-    <section class="edit-form">
-        <h1>Editar Usuario</h1>
-        <form action="/editUser/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <div class="input-form">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" value="<%= user.nombre %>" required>
-            </div>
-            <div class="input-form">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" value="<%= user.apellido %>" required>
-            </div>
-            <div class="input-form">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" value="<%= user.email %>" required>
-            </div>
-            <div class="input-form">
-                <label for="confirmar_email">Confirmar Correo Electrónico:</label>
-                <input type="email" id="confirmar_email" name="confirmar_email" value="<%= user.email %>" required>
-            </div>
-            <div class="input-form">
-                <label for="contrasenia">Contraseña:</label>
-                <input type="password" id="contrasenia" name="contrasenia" required>
-            </div>
-            <div class="input-form">
-                <label for="confirmar_contrasenia">Confirmar Contraseña:</label>
-                <input type="password" id="confirmar_contrasenia" name="confirmar_contrasenia" required>
-            </div>
-            <div class="input-form">
-                <label for="categoria">Categoria:</label>
-                <select class="fecha-inputs" name="categoria">
-                    <% if (user.categoria == 'Admin' ) { %>
-                        <option value="Admin" selected>Administrador</option>
-                        <option value="Customer">Cliente</option>
-                        <% } else { %>
-                        <option value="Admin">Administrador</option>
-                        <option value="Customer" selected>Cliente</option>
-                    <% } %>
-                </select>
-            </div>
-            <div class="input-form">
-                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" class="fecha-inputs" name="fecha_nacimiento" value="<%= user.fecha_nacimiento %>">
-                </input>
-            </div>
-            <div class="input-form">
-                <label for="sexo">Sexo:</label>
-                <select class="fecha-inputs" name="sexo">
-                    <% if (user.sexo == 'M' ) { %>
-                        <option value="M" selected>Masculino</option>
-                        <option value="F">Femenino</option>
-                        <option value="O">Otro</option>
-                        <% } else { if(user.sexo == 'F') { %>
-                            <option value="M" >Masculino</option>
-                            <option value="F" selected>Femenino</option>
-                            <option value="O">Otro</option>
-                    <% }  else {  %>
-                        <option value="M" >Masculino</option>
-                        <option value="F" >Femenino</option>
-                        <option value="O" selected>Otro</option>
-                    <% }   } %>
-                </select>
-            </div>
-            <div class="input-form">
-                <label for="imagen_perfil">Imagen de Perfil:</label>
-                <input type="file" name="imagen_perfil" />           
-            </div>
+        <div class="body">
+            <section class="edit-form registration-form">
+                <h1>Editar Usuario</h1>
+                <form action="/editUser/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="input-form">
+                        <input type="text" id="nombre" name="nombre" value="<%= user.nombre %>" required>
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="input-form">
+                        <input type="text" id="apellido" name="apellido" value="<%= user.apellido %>" required>
+                        <label for="apellido">Apellido</label>
+                    </div>
+                    <div class="input-form">
+                        <input type="email" id="email" name="email" value="<%= user.email %>" required>
+                        <label for="email">Correo Electrónico</label>
+                    </div>
+                    <div class="input-form">
+                        <input type="email" id="confirmar_email" name="confirmar_email" value="<%= user.email %>" required>
+                        <label for="confirmar_email">Confirmar Correo Electrónico</label>
+                    </div>
+                    <div class="input-form">
+                        <input type="password" id="contrasenia" name="contrasenia" required>
+                        <label for="contrasenia">Contraseña</label>
+                    </div>
+                    <div class="input-form">
+                        <input type="password" id="confirmar_contrasenia" name="confirmar_contrasenia" required>
+                        <label for="confirmar_contrasenia">Confirmar Contraseña</label>
+                    </div>
+                    <div class="input-form">
+                        <label class="label-select" for="categoria">Categoria</label>
+                        <select class="fecha-inputs" name="categoria">
+                            <% if (user.categoria == 'Admin' ) { %>
+                                <option value="Admin" selected>Administrador</option>
+                                <option value="Customer">Cliente</option>
+                                <% } else { %>
+                                <option value="Admin">Administrador</option>
+                                <option value="Customer" selected>Cliente</option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div class="input-form">
+                        <label class="label-select" for="fecha_nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" class="fecha-inputs" name="fecha_nacimiento" value="<%= user.fecha_nacimiento %>">
+                        </input>
+                    </div>
+                    <div class="input-form">
+                        <label class="label-select" for="sexo">Sexo</label>
+                        <select class="fecha-inputs" name="sexo">
+                            <% if (user.sexo == 'M' ) { %>
+                                <option value="M" selected>Masculino</option>
+                                <option value="F">Femenino</option>
+                                <option value="O">Otro</option>
+                                <% } else { if(user.sexo == 'F') { %>
+                                    <option value="M" >Masculino</option>
+                                    <option value="F" selected>Femenino</option>
+                                    <option value="O">Otro</option>
+                            <% }  else {  %>
+                                <option value="M" >Masculino</option>
+                                <option value="F" >Femenino</option>
+                                <option value="O" selected>Otro</option>
+                            <% }   } %>
+                        </select>
+                    </div>
+                    <div class="input-form">
+                        <label class="label-select" for="imagen_perfil">Imagen de Perfil</label>
+                        <input type="file" name="imagen_perfil" />           
+                    </div>
 
-            <div class="input-form">
-                <input type="submit" value="Editar">
-            </div>
-        </form>
-    </section>
+                    <div class="input-form">
+                        <input type="submit" value="Editar">
+                    </div>
+                </form>
+            </section>
+        </div>
     </div>
     <%- include('../partials/footer')%>
 </body>

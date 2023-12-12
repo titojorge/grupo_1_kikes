@@ -14,7 +14,7 @@ h1 {
 .card {
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 350px;
     background: rgb(240, 240, 240);
     border-radius: 5px;
     overflow: hidden;
@@ -37,7 +37,6 @@ h1 {
     position: absolute;
     width: 300px;
     height: 300px;
-    border-radius: 50%;
     background: rgb(0, 21, 158);
     bottom: 0;
 }
@@ -67,7 +66,6 @@ h1 {
 }
 
 .card .description {
-    height: 200px;
     padding: 40px 20px 20px 20px;
     border-bottom: solid 1px rgb(179, 179, 179);
     text-align: center;
