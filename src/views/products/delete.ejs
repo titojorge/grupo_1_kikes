@@ -4,25 +4,22 @@
 <head>
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/new.css">
+    <link rel="stylesheet" href="/css/delete.css">
     <link rel="stylesheet" href="/css/footer.css">
   </head>
   
   <body>
     <%- include('../partials/header')%>
-    <h1>Eliminar Producto </h1>
-    <h4>¿Estas seguro de querer borrar el producto : <%= product.nombre %>?</h4>
-    <p>
-        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-            <br>
-            <div> 
-                <button class="botonBorrar" type="submit">Borrar el Producto</button>
-            </div>
-            <div>
-                <a style="color: blue" class="botonVolver" href="/products/list">Listado de Productos</a>
-            </div>
-        </form>
-    </p>
+    <div class="body">
+        <section class="login-form">
+            <h1>Eliminar Producto </h1>
+            <h4>¿Estas seguro de querer borrar el producto : <span><%= product.nombre %></span> ?</h4>
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Borrar el Producto">
+                <a style="color: blue" class="botonVolver" href="/products/list"><input class="list" type="submit" value="Listado de Productos"></a>
+            </form>
+        </section>
+    </div>
     <%- include('../partials/footer') %>
 </body>
 
