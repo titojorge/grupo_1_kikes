@@ -1,6 +1,6 @@
 .main-home{
     font-family: Helvetica, sans-serif;
-    background-color: #d1d3aa;
+    background: linear-gradient(45deg, black, transparent);
     display: block;
 }
 .gif1{
