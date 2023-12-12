@@ -5,6 +5,7 @@ body{
 .envoltura{
     width: 900px;
     margin: auto;
+    top: 525px;
 }
 
 .galeria_fotos_fila {

@@ -1,14 +1,26 @@
-body{
+.main-home{
     font-family: Helvetica, sans-serif;
     background-color: #d1d3aa;
+    display: block;
 }
-.gif{
-    background-image: url(/video/argentina.gif);
-    background-position: center;
-    background-size: cover;
+.gif1{
+    background-image: url(/video/banner.gif);
+    background-position: top;
+    background-size: contain;
     background-repeat: no-repeat ;
     height: 100%;
     width: 100%;
+    position: absolute;
+}
+.gif2{
+    background-image: url(/video/argentina.gif);
+    background-position: bottom;
+    background-size:cover;
+    background-repeat: no-repeat ;
+    height: 100%;
+    width: 100%;
+    top:1160px;
+    position: relative;
 }
 
 .comment-fixed{
@@ -20,9 +32,13 @@ body{
 .fa-comments{
     font-size: 70px;
 }
-.img {
-    width: 80vw;
-    margin: auto;
+.video{
+    top: 1170px;
+    position: relative;
+}
+.video-file {
+    width: 100%;
+    object-fit: cover;
 }
 .galeria_fotos_fila p {
     margin: 0;

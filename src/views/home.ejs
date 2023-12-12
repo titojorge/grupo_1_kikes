@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <%- include('./partials/head') %>
-    </head>
+</head>
+
 <body>
     <%- include('./partials/header')%>
-    <main>
-        <div class="gif">
-        <section class="envoltura">
-            <div class="galeria_fotos_fila">
-                <div class="fotos_fila">
-                    <% products.forEach(function(elem) { %>
-                        <div class="box_fila box_imagen_galeria_fila">
-                            <a href="products/detail/<%= elem.id %>">
-                                <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
-                            </a>
+        <main class="main-home">
+            <div class="gif1">
+                <section class="envoltura">
+                    <div class="galeria_fotos_fila">
+                        <div class="fotos_fila">
+                            <% products.forEach(function(elem) { %>
+                                <div class="box_fila box_imagen_galeria_fila">
+                                    <a href="products/detail/<%= elem.id %>">
+                                        <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
+                                    </a>
+                                </div>
+                                <% }) %>
                         </div>
-                    <% }) %>
-                </div>
-                <div id="flecha_izq_fila " class="flechas_fila flecha1_fila ">
-                    <img src="/images/flecha2.png " alt=" ">
-                </div>
-                <div id="flecha_der_fila " class="flechas_fila flecha2_fila ">
-                    <img src="/images/flecha1.png " alt=" ">
-                </div>
-                <div class="contador_galeria_fila ">
-                    <p>12/12</p>
-                </div>
-            </div>
-        </section>
-        <section class="img">
-            <div class="galeria_fotos_fila">
-                <div class="fotos_fila">
-                    <div class="box_fila box_imagen_galeria_fila">
-                        <video width="640" height="360" controls>
-                            <source src="/video/kikes.mp4" type="video/mp4">
-                        </video>
+                        <div id="flecha_izq_fila " class="flechas_fila flecha1_fila ">
+                            <img src="/images/flecha2.png " alt=" ">
+                        </div>
+                        <div id="flecha_der_fila " class="flechas_fila flecha2_fila ">
+                            <img src="/images/flecha1.png " alt=" ">
+                        </div>
+                        <div class="contador_galeria_fila ">
+                            <p>12/12</p>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
-        <section class="productos_oferta">
-            <h2>Productos en Oferta</h2>
-            <div class="contenedor_articulos">
-                <article class="articulos_oferta">
-                    <% products.forEach(function(elem) { %>
-                        <% if (elem.type_category == 'in-sale') { %>
-                        <div class="articulo_oferta">
-                            <a href="products/detail/<%= elem.id %>">
-                                <p><b><%= elem.nombre %></b></p>
-                                <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
-                                <!-- <p><b>Descripcion</b></p>
+            <section class="video">
+                <video poster autoplay muted loop preload="none" playsinline source src="/video/kikes.mp4"
+                    type="video/mp4" class="video-file">
+                </video>
+            </section>
+            <div class="gif2">
+                <section class="productos_oferta">
+                    <h2>Productos en Oferta</h2>
+                    <div class="contenedor_articulos">
+                        <article class="articulos_oferta">
+                            <% products.forEach(function(elem) { %>
+                                <% if (elem.type_category=='in-sale' ) { %>
+                                    <div class="articulo_oferta">
+                                        <a href="products/detail/<%= elem.id %>">
+                                            <p><b>
+                                                    <%= elem.nombre %>
+                                                </b></p>
+                                            <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>"
+                                                alt="">
+                                            <!-- <p><b>Descripcion</b></p>
                                 <p><%= elem.description %></p> -->
-                                <p><b>Precio:</b> $ <%= elem.price %></p>
-                                <p><b>Descuento:</b> $ <%= elem.discount %></p>
-                            </a>
-                        </div>
-                        <% } %>
-                    <% }) %>
-                </article>
+                                            <p><b>Precio:</b> $ <%= elem.price %>
+                                            </p>
+                                            <p><b>Descuento:</b> $ <%= elem.discount %>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <% } %>
+                                        <% }) %>
+                        </article>
+                    </div>
+                </section>
+                <section class="suscripcion">
+                    <h2>¡Suscribete dejando tu email!</h2>
+                    <input type="email" placeholder="ejemplo@ejemplo.com">
+                    <button type="submit">Suscribirse</button>
+                </section>
             </div>
-        </section>
-        <section class="suscripcion">
-            <h2>¡Suscribete dejando tu email!</h2>
-            <input type="email" placeholder="ejemplo@ejemplo.com">
-            <button type="submit">Suscribirse</button>
-        </section>
-        </div>
-    </main>
-    <a class="comment-fixed" href="#">
-        <i class="far fa-comments fa-spin"></i>
-    </a>
+        </main>
     <%- include('./partials/footer')%>
+        <a class="comment-fixed" href="#">
+            <i class="far fa-comments fa-spin"></i>
+        </a>
 </body>
 <script src="/js/galeria_fila.js"></script>
+
 </html>
