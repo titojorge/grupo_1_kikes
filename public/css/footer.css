@@ -1,7 +1,7 @@
 .footer-bottom{
-    position: absolute;
-    width: 100%;
+    display: inline-block;
     background-color: rgba(25, 10, 110, 0.899);
+    width: 100%;
 }
 .footer{
     display: flex;

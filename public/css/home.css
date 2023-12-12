@@ -1,26 +1,23 @@
 .main-home{
     font-family: Helvetica, sans-serif;
-    background-color: #d1d3aa;
-    display: flex;
+    background: linear-gradient(45deg, black, transparent);
+    display: block;
 }
 .gif1{
     background-image: url(/video/banner.gif);
-    background-position: top;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat ;
-    height: 100%;
     width: 100%;
-    position: absolute;
+    padding:20%;
 }
 .gif2{
     background-image: url(/video/argentina.gif);
-    background-position: bottom;
-    background-size:cover;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat ;
     height: 100%;
     width: 100%;
-    top:1160px;
-    position: relative;
 }
 
 .comment-fixed{
@@ -32,22 +29,74 @@
 .fa-comments{
     font-size: 70px;
 }
-.video{
-    top: 1170px;
-    position: relative;
-}
 .video-file {
     width: 100%;
     object-fit: cover;
 }
+.envoltura{
+    width: 900px;
+    margin: auto;
+}
+.galeria_fotos_fila {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 10px 20px;
+}
 .galeria_fotos_fila p {
     margin: 0;
+}
+.galeria_fotos_fila .fotos_fila {
+    width: 2000%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    align-items: flex-start;
+    transition: all 0.3s linear;
+}
+.galeria_fotos_fila .flechas_fila {
+    width: 5%;
+    max-width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 99;
+    filter: drop-shadow(0px 0px 2px black);
+    cursor: pointer;
+}
+
+.galeria_fotos_fila .flecha1_fila {
+    left: 30px;
+}
+
+.galeria_fotos_fila .flecha2_fila {
+    right: 30px;
+}
+
+.galeria_fotos_fila .flechas_fila img {
+    width: 100%;
 }
 .galeria_fotos_fila .flecha3_fila {
     right: 55%;
 }
+.galeria_fotos_fila .box_imagen_galeria_fila img {
+    width: 100%;
+    aspect-ratio: 470 / 330;
+    object-fit: fill;
+    vertical-align: middle;
+}
 .galeria_fotos_fila #simbolo_play img {
     width: 100px;
+}
+.galeria_fotos_fila .contador_galeria_fila {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 3px 5px;
+    font-size: 22px;
 }
 .productos_oferta h2{
     font-family: 'Hind Siliguri', sans-serif;
@@ -69,8 +118,8 @@
     flex-wrap: wrap;
 }
 .articulo_oferta{
-    backdrop-filter: blur(20px);
     display: flex;
+    backdrop-filter: blur(20px);
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -85,19 +134,17 @@
 }
 .imagen_oferta{
     width: 150px;
-    margin:5px;
     aspect-ratio: 150/150;
 }
 .suscripcion{
     background-color: rgb(30, 0, 255);
     width: 75%;
-    margin: 25px auto;
+    margin: auto;
     padding: 20px 30px;
     text-align: center;
     border-radius: 20px;
 }
 .suscripcion input{
-    display: block;
     width: 60%;
     text-align: center;
     margin: 10px auto;
@@ -105,7 +152,6 @@
     border-radius: 10px;
 }
 .suscripcion button{
-    display: block;
     width: 150px;
     margin: 10px auto;
     padding: 10px 10px;

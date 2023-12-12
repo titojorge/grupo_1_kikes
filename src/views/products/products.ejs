@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/footer.css">
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/products.css">
 </head>
+
 <body>
-    <%- include('../partials/header')%>
-        <main>
-            <div class="gif2">
-                <section class="productos_oferta">
-                    <h2>Todos los productos</h2>
-                    <%- include('./allProducts')%>
-                    <a class="comment-fixed" href="#">
-                        <i class="far fa-comments fa-spin"></i>
-                    </a>
-                </section>
-            </div>
-        </main>
-        <%- include('../partials/footer')%>
+  <%- include('../partials/header')%>
+  <main class="body-products">
+    <section class="productos_oferta">
+      <h2>Todos los productos</h2>
+      <%- include('./allProducts')%>
+      <a class="comment-fixed" href="#">
+        <i class="far fa-comments fa-spin"></i>
+      </a>
+    </section>
+  </main>
+  <%- include('../partials/footer')%>
 </body>
+
 </html>

@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('../partials/head') %>
-        <link rel="stylesheet" href="/css/header.css">
-        <link rel="stylesheet" href="/css/searchResult.css">
-        <link rel="stylesheet" href="/css/footer.css">
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/searchResult.css">
 </head>
+
 <body>
-    <%- include('../partials/header')%>
-        <main>
-            <div class="gif">
-                <section class="productos_oferta">
-                    <h2>Resultado de busqueda</h2>
-                    <div class="contenedor_articulos">
-                        <article class="articulos_oferta">
-                            <% products.forEach(function(elem) { %>
-                                <div class="articulo_oferta">
-                                    <a href="./detail/<%= elem.id %>">
-                                        <p><b>
-                                                <%= elem.nombre %>
-                                            </b></p>
-                                        <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
-                                        <!-- <p><b>Descripcion</b></p>
+  <%- include('../partials/header')%>
+  <main class="body-search">
+    <section class="productos_oferta">
+      <h2>Resultado de busqueda</h2>
+      <div class="contenedor_articulos">
+        <article class="articulos_oferta">
+          <% products.forEach(function(elem) { %>
+          <div class="articulo_oferta">
+            <a href="./detail/<%= elem.id %>">
+              <p><b>
+                  <%= elem.nombre %>
+                </b></p>
+              <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
+              <!-- <p><b>Descripcion</b></p>
                                 <p><%= elem.description %></p> -->
-                                        <p><b>Precio:</b> $ <%= elem.price %>
-                                        </p>
-                                        <p><b>Descuento:</b> % <%= elem.discount %>
-                                        </p>
-                                    </a>
-                                </div>
-                                <% }) %>
-                                    <% if(products.length==0) { %>
-                                        <div class="text-danger">
-                                            <h4>No se encontraron resultados.</h4>
-                                            <%- include('./allProducts')%>
-                                        </div>
-                                        <% } %>
-                        </article>
-                    </div>
-                    <a class="comment-fixed" href="#">
-                        <i class="far fa-comments fa-spin"></i>
-                    </a>
-                </section>
-            </div>
-        </main>
-        <%- include('../partials/footer')%>
+              <p><b>Precio:</b> $ <%= elem.price %>
+              </p>
+              <p><b>Descuento:</b> % <%= elem.discount %>
+              </p>
+            </a>
+          </div>
+          <% }) %>
+          <% if(products.length==0) { %>
+          <div class="text-danger">
+            <h4>No se encontraron resultados.</h4>
+            <%- include('./allProducts')%>
+          </div>
+          <% } %>
+        </article>
+      </div>
+      <a class="comment-fixed" href="#">
+        <i class="far fa-comments fa-spin"></i>
+      </a>
+    </section>
+  </main>
+  <%- include('../partials/footer')%>
 </body>
+
 </html>
