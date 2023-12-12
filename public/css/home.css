@@ -14,13 +14,12 @@
 }
 .gif2{
     background-image: url(/video/argentina.gif);
-    background-position: bottom;
-    background-size:cover;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat ;
     height: 100%;
     width: 100%;
     top:1160px;
-    position: relative;
 }
 
 .comment-fixed{
