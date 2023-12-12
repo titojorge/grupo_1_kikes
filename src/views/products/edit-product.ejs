@@ -8,7 +8,8 @@
 
 <body>
   <%- include('../partials/header')%>
-  <div class="body">
+  <div class="gif2">
+    <div class="body">
     <section class="registration-form">
       <h1>Editar Producto </h1>
       <form action="/products/edit/<%= productFound.id %>?_method=PUT" method="POST" class="form_product_edit" enctype="multipart/form-data">
@@ -71,6 +72,7 @@
         </div>
       </form>
     </section>
+    </div>
   </div>
   <%- include('../partials/footer')%>
 </body>
