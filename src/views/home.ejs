@@ -9,36 +9,37 @@
     <%- include('./partials/header')%>
         <main class="main-home">
             <div class="gif1">
-                <section class="envoltura">
-                    <div class="galeria_fotos_fila">
-                        <div class="fotos_fila">
-                            <% products.forEach(function(elem) { %>
-                                <div class="box_fila box_imagen_galeria_fila">
-                                    <a href="products/detail/<%= elem.id %>">
-                                        <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
-                                    </a>
-                                </div>
-                                <% }) %>
-                        </div>
-                        <div id="flecha_izq_fila " class="flechas_fila flecha1_fila ">
-                            <img src="/images/flecha2.png " alt=" ">
-                        </div>
-                        <div id="flecha_der_fila " class="flechas_fila flecha2_fila ">
-                            <img src="/images/flecha1.png " alt=" ">
-                        </div>
-                        <div class="contador_galeria_fila ">
-                            <p>12/12</p>
-                        </div>
-                    </div>
-                </section>
+                
             </div>
-            <section class="video">
+            <div class="envoltura">
+                <div class="galeria_fotos_fila">
+                    <div class="fotos_fila">
+                        <% products.forEach(function(elem) { %>
+                            <div class="box_fila box_imagen_galeria_fila">
+                                <a href="products/detail/<%= elem.id %>">
+                                    <img class="imagen_oferta" src="/images/productsImg/<%= elem.image %>" alt="">
+                                </a>
+                            </div>
+                            <% }) %>
+                    </div>
+                    <div id="flecha_izq_fila " class="flechas_fila flecha1_fila ">
+                        <img src="/images/flecha2.png " alt=" ">
+                    </div>
+                    <div id="flecha_der_fila " class="flechas_fila flecha2_fila ">
+                        <img src="/images/flecha1.png " alt=" ">
+                    </div>
+                    <div class="contador_galeria_fila ">
+                        <p>12/12</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
                 <video poster autoplay muted loop preload="none" playsinline source src="/video/kikes.mp4"
                     type="video/mp4" class="video-file">
                 </video>
-            </section>
+            </div>
             <div class="gif2">
-                <section class="productos_oferta">
+                <div class="productos_oferta">
                     <h2>Productos en Oferta</h2>
                     <div class="contenedor_articulos">
                         <article class="articulos_oferta">
@@ -63,12 +64,12 @@
                             <% }) %>
                         </article>
                     </div>
-                </section>
-                <section class="suscripcion">
+                </div>
+                <div class="suscripcion">
                     <h2>¡Suscribete dejando tu email!</h2>
                     <input type="email" placeholder="ejemplo@ejemplo.com">
                     <button type="submit">Suscribirse</button>
-                </section>
+                </div>
             </div>
         </main>
         <%- include('./partials/footer')%>
