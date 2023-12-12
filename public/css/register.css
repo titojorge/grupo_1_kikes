@@ -1,14 +1,15 @@
+.giff {
+    background-image: url(/video/argentina.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .body {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 200vh;
-}
-.giff {
-    background-image: url(/video/argentina.gif);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat ;
 }
 
 .registration-form {
@@ -76,14 +77,14 @@ form .input-form {
     background: #344e83;
 }
 
-.input-form input:focus ~ label,
-.input-form input:not(:placeholder-shown) ~ label {
+.input-form input:focus~label,
+.input-form input:not(:placeholder-shown)~label {
     top: -5px;
     color: #344e83;
 }
 
-.input-form input:focus ~ span::before,
-.input-form input:focus ~ span::before {
+.input-form input:focus~span::before,
+.input-form input:focus~span::before {
     width: 100%;
 }
 
@@ -130,7 +131,7 @@ input[type="submit"] {
     text-decoration: underline;
 }
 
-.text-danger{
+.text-danger {
     color: red;
     font-weight: bold;
     background-color: pink;
