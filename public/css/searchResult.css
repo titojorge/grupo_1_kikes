@@ -1,5 +1,7 @@
 .body-search{
     background: linear-gradient(320deg, #eb92be, #ffef78,#63c);
+    font-family: Helvetica, sans-serif;
+    text-align: center;
 }
 .productos_oferta h2{
     font-family: 'Hind Siliguri', sans-serif;

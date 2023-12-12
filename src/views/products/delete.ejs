@@ -6,17 +6,19 @@
     <link rel="stylesheet" href="/css/delete.css">
   </head>
   
-  <body>
+<body>
     <%- include('../partials/header')%>
+    <div class="gif2">
     <div class="body">
         <section class="login-form">
             <h1>Eliminar Producto </h1>
             <h4>¿Estas seguro de querer borrar el producto : <span><%= product.nombre %></span> ?</h4>
             <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                 <input type="submit" value="Borrar el Producto">
-                <a style="color: blue" class="botonVolver" href="/products/list"><input class="list" type="submit" value="Listado de Productos"></a>
             </form>
+            <a style="color: blue" class="botonVolver" href="/products/list"><input class="list" type="submit" value="Listado de Productos"></a>
         </section>
+    </div>
     </div>
     <%- include('../partials/footer') %>
 </body>
