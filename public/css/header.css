@@ -55,7 +55,6 @@ a {
 }
 .busqueda{
     border: solid thin transparent;
-    color: aliceblue;
     /**border: solid var(--gl-color-grey-100);*/
     padding: 0 35px 0 10px;
     height: 32px;

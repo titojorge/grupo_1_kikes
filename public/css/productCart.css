@@ -19,6 +19,9 @@
 .resumen h2{
     margin-top: -10px;
 }
+.lista-monto{
+    backdrop-filter: blur(20px);
+}
 .monto{
     display: flex;
     justify-content: space-around;
