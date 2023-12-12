@@ -1,7 +1,6 @@
-.main{
+.body-cart{
     display: flex;
-    flex-direction: row-reverse;
-    margin-top: 5px;
+    padding: 100px;
 }
 .giff {
     background-image: url(/video/argentina.gif);
@@ -19,6 +18,9 @@
 .resumen h2{
     margin-top: -10px;
 }
+.carrito p{
+    color: #000;
+}
 .lista-monto{
     backdrop-filter: blur(20px);
 }
@@ -33,7 +35,11 @@
     text-align: center;
     width: 65%;
 }
+.lista-monto p{
+    color: #000;
+}
 .product-carrito{
+    backdrop-filter: blur(20px);
     display: flex;
     justify-content: space-around;
     border: solid #000 0.5px;
