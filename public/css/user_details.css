@@ -3,6 +3,7 @@
     border: 1px solid black;
     margin: 20px auto;
     border-radius: 20px;
+    height: 420px;
 }
 img.image_user{
     border-radius: 100%;
@@ -22,6 +23,12 @@ img.image_user{
     padding: 5px 20px;
     border-radius: 5px;
     transition: .3s;
+}
+.contact a.edit {
+    background: #fca500;
+}
+.contact a.delete {
+    background: red;
 }
 
 .contact a:hover {
